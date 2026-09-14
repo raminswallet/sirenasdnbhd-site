@@ -6,10 +6,12 @@
 
   <meta
     name="description"
-    content="Sirena Sdn Bhd is a Malaysia-registered international seafood trading company supporting selected frozen seafood programmes for qualified buyers."
+    content="Sirena Sdn Bhd is an independent international trade and sourcing desk for selected frozen seafood programmes and qualified commercial requirements."
   >
 
-  <title>Sirena Sdn Bhd | International Frozen Seafood Trade</title>
+  <meta name="robots" content="index, follow">
+
+  <title>Sirena Sdn Bhd | International Frozen Seafood Trade & Sourcing</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,18 +23,18 @@
 
   <style>
     :root {
-      --deep-navy: #071e2b;
-      --navy: #102c3b;
-      --sea: #0e586b;
-      --teal: #1d7783;
-      --soft-sea: #eaf3f1;
-      --sand: #f7f3eb;
-      --gold: #b79757;
-      --gold-light: #d7bd7e;
+      --deep: #061b28;
+      --deep-2: #092b38;
+      --ink: #102d3b;
+      --sea: #0e5c6d;
+      --teal: #197986;
+      --foam: #eaf3f1;
+      --sand: #f6f2ea;
+      --gold: #bc9a58;
+      --gold-soft: #dcc486;
       --white: #ffffff;
-      --text: #102c3b;
-      --muted: #61737a;
-      --line: #d9e4e1;
+      --muted: #60747a;
+      --line: #d7e1df;
     }
 
     * {
@@ -45,34 +47,34 @@
 
     body {
       margin: 0;
-      font-family: "DM Sans", Arial, sans-serif;
+      color: var(--ink);
       background: var(--sand);
-      color: var(--text);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: 16px;
       line-height: 1.6;
     }
 
     .wrap {
-      width: 100%;
-      max-width: 1180px;
+      width: min(1180px, 100%);
       margin: 0 auto;
       padding: 0 26px;
     }
 
-    /* HERO */
+    /* Header / Hero */
 
     .hero {
+      min-height: 660px;
+      padding: 25px 0 74px;
       color: var(--white);
-      padding: 26px 0 72px;
-      min-height: 650px;
       background:
         linear-gradient(
-          120deg,
-          rgba(5, 29, 42, 0.96),
-          rgba(9, 63, 76, 0.93)
+          118deg,
+          rgba(4, 25, 37, 0.97),
+          rgba(7, 66, 77, 0.91)
         ),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3Cpath d='M0 520 C160 450 280 580 450 520 S760 440 1200 540 V800 H0Z' fill='%23156b78' opacity='.35'/%3E%3Cpath d='M0 585 C170 515 320 640 515 570 S880 505 1200 610 V800 H0Z' fill='%234aa1a2' opacity='.20'/%3E%3C/svg%3E");
-      background-size: cover;
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3Cpath d='M0 555 C155 455 335 625 520 542 S922 455 1200 570 V800 H0Z' fill='%23197583' opacity='.38'/%3E%3Cpath d='M0 630 C180 540 370 690 590 595 S1000 555 1200 650 V800 H0Z' fill='%236ab0aa' opacity='.17'/%3E%3C/svg%3E");
       background-position: center;
+      background-size: cover;
     }
 
     .nav {
@@ -80,7 +82,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      padding-bottom: 22px;
+      padding-bottom: 21px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     }
 
@@ -93,17 +95,17 @@
     }
 
     .mark {
+      display: grid;
       width: 52px;
       height: 52px;
-      display: grid;
       place-items: center;
-      border: 1px solid rgba(215, 189, 126, 0.58);
+      flex-shrink: 0;
+      border: 1px solid rgba(220, 196, 134, 0.62);
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.04);
-      flex-shrink: 0;
     }
 
-    .brand-name {
+    .brand b {
       display: block;
       font-size: 17px;
       font-weight: 700;
@@ -111,45 +113,44 @@
       text-transform: uppercase;
     }
 
-    .brand-sub {
+    .brand small {
       display: block;
-      margin-top: 2px;
+      color: #d9e8e6;
       font-size: 10px;
-      letter-spacing: 0.18em;
-      color: #d9e7e6;
+      letter-spacing: 0.17em;
       text-transform: uppercase;
     }
 
-    .nav-button,
-    .button {
+    .cta,
+    .outline {
       display: inline-block;
       padding: 11px 17px;
-      border: 1px solid var(--gold-light);
+      border: 1px solid var(--gold-soft);
       color: var(--white);
-      text-decoration: none;
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.1em;
+      text-decoration: none;
       text-transform: uppercase;
       transition: all 0.2s ease;
     }
 
-    .nav-button:hover,
-    .button:hover {
-      background: var(--gold-light);
-      color: var(--deep-navy);
+    .cta:hover,
+    .outline:hover {
+      color: var(--deep);
+      background: var(--gold-soft);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+      grid-template-columns: 1.25fr 0.75fr;
       gap: 60px;
       align-items: end;
-      padding-top: 95px;
+      padding-top: 94px;
     }
 
     .eyebrow,
-    .section-kicker {
+    .kicker {
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.18em;
@@ -157,57 +158,56 @@
     }
 
     .eyebrow {
-      color: var(--gold-light);
+      color: var(--gold-soft);
     }
 
     .hero h1 {
-      max-width: 760px;
+      max-width: 770px;
       margin: 16px 0 22px;
       font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(42px, 5vw, 68px);
+      font-size: clamp(42px, 5.2vw, 69px);
       font-weight: 700;
       line-height: 1.05;
     }
 
     .hero p {
       max-width: 700px;
-      margin: 0 0 24px;
-      color: #dbe9e8;
+      margin: 0 0 25px;
+      color: #dcebea;
       font-size: 17px;
     }
 
-    .hero-card {
+    .hero-note {
       padding: 8px 0 8px 24px;
-      border-left: 2px solid var(--gold-light);
-      color: #dcebea;
+      border-left: 2px solid var(--gold-soft);
     }
 
-    .hero-card strong {
+    .hero-note strong {
       display: block;
       margin-bottom: 8px;
-      color: var(--white);
       font-size: 16px;
     }
 
-    .hero-card p {
+    .hero-note p {
       margin: 0;
       font-size: 14px;
     }
 
-    /* GENERAL */
+    /* Main sections */
 
     .section {
       padding: 82px 0;
     }
 
-    .section-kicker {
+    .kicker {
       color: var(--teal);
     }
 
-    .section h2 {
+    h2 {
       margin: 10px 0 0;
       font-family: "Playfair Display", Georgia, serif;
       font-size: 42px;
+      font-weight: 700;
       line-height: 1.15;
     }
 
@@ -218,8 +218,8 @@
       align-items: start;
     }
 
-    .intro-text {
-      color: #43565c;
+    .introtext {
+      color: #42585e;
       font-size: 17px;
     }
 
@@ -227,85 +227,84 @@
       margin-top: 22px;
       padding: 17px 19px;
       border-left: 3px solid var(--gold);
-      background: var(--soft-sea);
-      color: #34535b;
+      background: var(--foam);
+      color: #34545c;
       font-size: 14px;
     }
 
-    /* PRODUCT SECTIONS */
+    /* Product categories */
 
-    .focus {
+    .white {
       background: var(--white);
     }
 
-    .product-grid {
+    .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
       margin-top: 40px;
     }
 
-    .product-card {
-      min-height: 180px;
-      padding: 25px;
+    .card {
+      min-height: 175px;
+      padding: 24px;
       border: 1px solid var(--line);
       background: var(--white);
     }
 
-    .product-card h3 {
+    .card h3 {
       margin: 0 0 9px;
-      color: var(--deep-navy);
+      color: var(--deep);
       font-size: 17px;
     }
 
-    .product-card p {
+    .card p {
       margin: 0;
       color: var(--muted);
       font-size: 14px;
     }
 
-    /* WHO WE WORK WITH */
+    /* Audience */
 
-    .who {
-      background: var(--deep-navy);
+    .audience {
+      color: var(--white);
+      background: var(--deep);
+    }
+
+    .audience .kicker {
+      color: var(--gold-soft);
+    }
+
+    .audience h2 {
       color: var(--white);
     }
 
-    .who .section-kicker {
-      color: var(--gold-light);
-    }
-
-    .who h2 {
-      color: var(--white);
-    }
-
-    .who-grid {
+    .audience-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
       margin-top: 38px;
     }
 
-    .who-card {
+    .audience-card {
       padding-top: 15px;
       border-top: 1px solid rgba(255, 255, 255, 0.25);
     }
 
-    .who-card h3 {
+    .audience-card h3 {
       margin: 0 0 6px;
-      color: var(--white);
       font-size: 16px;
     }
 
-    .who-card p {
+    .audience-card p {
       margin: 0;
-      color: #b8cfce;
+      color: #b9d0ce;
       font-size: 14px;
     }
 
-    /* PROCESS */
+    /* Steps */
 
-    .process-grid {
+    .steps {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 22px;
@@ -313,11 +312,11 @@
     }
 
     .step {
-      padding-top: 15px;
+      padding-top: 14px;
       border-top: 2px solid var(--gold);
     }
 
-    .step-number {
+    .number {
       color: var(--gold);
       font-family: "Playfair Display", Georgia, serif;
       font-size: 30px;
@@ -334,32 +333,28 @@
       font-size: 14px;
     }
 
-    /* FORM */
+    /* Form section */
 
-    .enquiry-section {
-      background: linear-gradient(150deg, #edf4f1, #f7f3eb);
+    .formarea {
+      background: linear-gradient(145deg, #edf4f1, #f6f2ea);
     }
 
-    .form-shell {
+    .formbox {
       margin-top: 38px;
       padding: 36px;
       border: 1px solid var(--line);
       background: var(--white);
     }
 
-    .form-head {
-      margin-bottom: 25px;
-    }
-
-    .form-head h3 {
+    .formbox h3 {
       margin: 0;
       font-family: "Playfair Display", Georgia, serif;
       font-size: 29px;
     }
 
-    .form-head p {
-      max-width: 650px;
-      margin: 6px 0 0;
+    .formbox > p {
+      max-width: 690px;
+      margin: 6px 0 26px;
       color: var(--muted);
       font-size: 14px;
     }
@@ -377,7 +372,7 @@
     label {
       display: block;
       margin-bottom: 6px;
-      color: #38535a;
+      color: #38565c;
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.04em;
@@ -388,11 +383,12 @@
     textarea {
       width: 100%;
       padding: 12px 13px;
-      border: 1px solid #cfdcda;
+      border: 1px solid #ccd9d7;
       border-radius: 0;
       background: #fbfdfc;
-      color: var(--text);
-      font: 14px "DM Sans", Arial, sans-serif;
+      color: var(--ink);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: 14px;
     }
 
     textarea {
@@ -403,7 +399,7 @@
     input:focus,
     select:focus,
     textarea:focus {
-      outline: 2px solid rgba(29, 119, 131, 0.22);
+      outline: 2px solid rgba(25, 121, 134, 0.2);
       border-color: var(--teal);
     }
 
@@ -421,10 +417,10 @@
       margin-top: 4px;
     }
 
-    .submit-button {
+    .submit {
       padding: 14px 21px;
       border: 0;
-      background: var(--deep-navy);
+      background: var(--deep);
       color: var(--white);
       font-size: 12px;
       font-weight: 700;
@@ -434,29 +430,34 @@
       transition: background 0.2s ease;
     }
 
-    .submit-button:hover {
+    .submit:hover {
       background: var(--teal);
     }
 
-    .form-note {
+    .submit:disabled {
+      cursor: wait;
+      opacity: 0.75;
+    }
+
+    .formnote {
       margin-top: 15px;
       color: var(--muted);
       font-size: 12px;
     }
 
-    /* FOOTER */
+    /* Footer */
 
     footer {
       padding: 35px 0;
-      background: #061925;
       color: #bcd0cf;
+      background: #051821;
     }
 
-    .footer-grid {
+    .footergrid {
       display: flex;
+      align-items: flex-start;
       justify-content: space-between;
       gap: 25px;
-      align-items: flex-start;
     }
 
     footer strong {
@@ -464,30 +465,30 @@
     }
 
     footer p {
-      max-width: 780px;
+      max-width: 790px;
       margin: 8px 0 0;
       font-size: 12px;
       line-height: 1.6;
     }
 
-    .legal {
+    .footright {
+      font-size: 12px;
       text-align: right;
       white-space: nowrap;
-      font-size: 12px;
     }
 
-    .legal a {
-      color: var(--gold-light);
+    .footright a {
+      color: var(--gold-soft);
       text-decoration: none;
     }
 
     .tiny {
       margin-top: 12px;
-      opacity: 0.8;
       font-size: 11px;
+      opacity: 0.82;
     }
 
-    /* RESPONSIVE */
+    /* Responsive */
 
     @media (max-width: 850px) {
       .hero {
@@ -504,26 +505,26 @@
         padding-top: 65px;
       }
 
-      .product-grid,
-      .who-grid {
+      .grid,
+      .audience-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .process-grid {
+      .steps {
         grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-grid {
-        display: block;
-      }
-
-      .legal {
-        margin-top: 20px;
-        text-align: left;
       }
 
       .fields {
         grid-template-columns: 1fr;
+      }
+
+      .footergrid {
+        display: block;
+      }
+
+      .footright {
+        margin-top: 20px;
+        text-align: left;
       }
     }
 
@@ -536,7 +537,7 @@
         align-items: flex-start;
       }
 
-      .nav-button {
+      .nav .cta {
         display: none;
       }
 
@@ -548,17 +549,17 @@
         padding: 58px 0;
       }
 
-      .section h2 {
+      h2 {
         font-size: 34px;
       }
 
-      .product-grid,
-      .who-grid,
-      .process-grid {
+      .grid,
+      .audience-grid,
+      .steps {
         grid-template-columns: 1fr;
       }
 
-      .form-shell {
+      .formbox {
         padding: 23px;
       }
     }
@@ -567,14 +568,15 @@
 
 <body>
 
-  <header class="hero">
+  <header class="hero" id="top">
     <div class="wrap">
 
       <nav class="nav">
+
         <a class="brand" href="#top" aria-label="Sirena Sdn Bhd Home">
 
           <span class="mark" aria-hidden="true">
-            <!-- Minimal abstract, non-explicit mermaid / sea symbol -->
+            <!-- Minimal abstract Sirena / Mermaid symbol -->
             <svg
               width="31"
               height="31"
@@ -586,7 +588,7 @@
                 d="M33 10c7 4 10 11 8 18-1 5-5 8-9 10
                    7 1 13 5 16 11-8 1-15-1-20-6
                    -4-4-6-10-5-16 1-8 4-13 10-17Z"
-                stroke="#d7bd7e"
+                stroke="#dcc486"
                 stroke-width="2.4"
                 stroke-linejoin="round"
               />
@@ -595,14 +597,14 @@
                    5-1 9 0 13 3
                    -1 5-5 9-10 11
                    8 1 16-3 20-10"
-                stroke="#d7bd7e"
+                stroke="#dcc486"
                 stroke-width="2.4"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
               <path
                 d="M30 19c-3 3-4 7-3 11"
-                stroke="#d7bd7e"
+                stroke="#dcc486"
                 stroke-width="2.4"
                 stroke-linecap="round"
               />
@@ -610,44 +612,54 @@
           </span>
 
           <span>
-            <span class="brand-name">Sirena Sdn Bhd</span>
-            <span class="brand-sub">International Seafood Trade</span>
+            <b>Sirena Sdn Bhd</b>
+            <small>International Seafood Trade</small>
           </span>
 
         </a>
 
-        <a class="nav-button" href="#enquiry">
-          Submit Buyer Enquiry
+        <a class="cta" href="#enquiry">
+          Submit Confidential Enquiry
         </a>
+
       </nav>
 
-      <div class="hero-grid" id="top">
+      <div class="hero-grid">
 
         <div>
-          <div class="eyebrow">Malaysia · Established 2013</div>
+
+          <div class="eyebrow">
+            Malaysia · Established 2013
+          </div>
 
           <h1>
-            Selected frozen seafood programmes for qualified buyers.
+            Selected frozen seafood opportunities. Qualified commercial requirements.
           </h1>
 
           <p>
-            Sirena Sdn Bhd supports confidential B2B sourcing and commercial
-            coordination for importers, processors, re-processors, distributors
-            and wholesale buyers across international seafood markets.
+            Sirena Sdn Bhd is an independent international trade and sourcing
+            desk for selected frozen seafood programmes. We work discreetly with
+            qualified buyers and relevant supply-side parties on a
+            transaction-by-transaction basis.
           </p>
 
-          <a class="button" href="#enquiry">
+          <a class="outline" href="#enquiry">
             Submit Confidential Enquiry
           </a>
+
         </div>
 
-        <aside class="hero-card">
-          <strong>Quiet, requirement-led trade.</strong>
+        <aside class="hero-note">
+
+          <strong>Controlled access. Commercial clarity.</strong>
+
           <p>
             We do not operate as a public listing marketplace or publish live
-            inventory. Product opportunities are considered individually against
-            a clear commercial requirement.
+            inventory. Requirements and available programmes are reviewed
+            selectively, with information shared progressively according to
+            relevance and confirmation.
           </p>
+
         </aside>
 
       </div>
@@ -660,41 +672,45 @@
       <div class="wrap intro">
 
         <div>
-          <div class="section-kicker">The Sirena approach</div>
+          <div class="kicker">The Sirena approach</div>
+
           <h2>
-            Clear requirements. Selected supply. Discreet execution.
+            Connecting relevant requirements with selected supply programmes.
           </h2>
         </div>
 
-        <div class="intro-text">
-          Sirena Sdn Bhd is a Malaysia-registered international trading company
-          established in 2013. We work with qualified seafood buyers seeking
-          selected frozen product programmes for import, distribution,
-          processing, re-processing or re-export.
+        <div class="introtext">
+
+          Sirena Sdn Bhd supports international B2B seafood trade involving
+          frozen products, processing raw material and selected marine
+          specialities. We consider both qualified buying requirements and
+          relevant supply opportunities across established international seafood
+          markets.
 
           <div class="note">
-            Species, origin, catch area, production details, specifications,
-            documentation, pricing, allocation and shipment timing remain subject
-            to confirmation by the relevant supply-side party and applicable
-            market requirements.
+            Species, origin, catch area, product form, grade, packing,
+            allocation, vessel or plant details, documentation, pricing and
+            shipment timing remain subject to confirmation by the relevant
+            producer, exporter, processor, vessel owner or appointed
+            representative.
           </div>
-        </div>
 
+        </div>
       </div>
     </section>
 
-    <section class="section focus">
+    <section class="section white">
       <div class="wrap">
 
-        <div class="section-kicker">Selected seafood focus</div>
+        <div class="kicker">Selected seafood focus</div>
 
         <h2>
-          Broad capability, opportunity by opportunity.
+          Broad product coverage, assessed opportunity by opportunity.
         </h2>
 
-        <div class="product-grid">
+        <div class="grid">
 
-          <article class="product-card">
+          <article class="card">
             <h3>Tuna & Large Pelagics</h3>
             <p>
               Skipjack, yellowfin, bigeye, albacore, longtail tuna, swordfish,
@@ -702,7 +718,7 @@
             </p>
           </article>
 
-          <article class="product-card">
+          <article class="card">
             <h3>Wahoo, Seerfish & King Mackerel</h3>
             <p>
               Wahoo, Spanish mackerel, seerfish, king mackerel and related
@@ -710,7 +726,7 @@
             </p>
           </article>
 
-          <article class="product-card">
+          <article class="card">
             <h3>Mackerel & Pelagic Fish</h3>
             <p>
               Blue, Atlantic and chub mackerel; jack and horse mackerel; scad,
@@ -718,7 +734,7 @@
             </p>
           </article>
 
-          <article class="product-card">
+          <article class="card">
             <h3>Whitefish & Groundfish</h3>
             <p>
               Hake, hoki, ling, cod, pollock, haddock, blue whiting, redfish,
@@ -726,7 +742,7 @@
             </p>
           </article>
 
-          <article class="product-card">
+          <article class="card">
             <h3>Flatfish & Demersal Fish</h3>
             <p>
               Sole-type species, flounder, plaice, halibut, Greenland halibut,
@@ -734,7 +750,7 @@
             </p>
           </article>
 
-          <article class="product-card">
+          <article class="card">
             <h3>Cephalopods & Shellfish</h3>
             <p>
               Squid, cuttlefish, octopus, selected shrimp, prawns, crab,
@@ -742,7 +758,7 @@
             </p>
           </article>
 
-          <article class="product-card">
+          <article class="card">
             <h3>Processing Raw Material</h3>
             <p>
               WR, H&G, HGT, IQF, seafrozen blocks, interleaved fillets, blocks,
@@ -750,19 +766,19 @@
             </p>
           </article>
 
-          <article class="product-card">
+          <article class="card">
             <h3>Seasonal Opportunities</h3>
             <p>
-              Selected products are considered according to verified
-              availability, commercial viability and buyer specifications.
+              Selected products considered according to verified availability,
+              season, market access and commercial viability.
             </p>
           </article>
 
-          <article class="product-card">
+          <article class="card">
             <h3>Documentation-Led Trade</h3>
             <p>
-              Requirements may include health certificates, catch/IUU documents,
-              origin, HACCP, MSC, Halal and market-specific compliance records.
+              Requirements may include health certificates, catch/IUU records,
+              origin, HACCP, MSC, Halal and market-specific compliance documents.
             </p>
           </article>
 
@@ -770,38 +786,38 @@
       </div>
     </section>
 
-    <section class="section who">
+    <section class="section audience">
       <div class="wrap">
 
-        <div class="section-kicker">Who we work with</div>
+        <div class="kicker">Who we work with</div>
 
         <h2>
-          For serious, clearly defined commercial requirements.
+          Commercial parties with a defined requirement or relevant programme.
         </h2>
 
-        <div class="who-grid">
+        <div class="audience-grid">
 
-          <div class="who-card">
-            <h3>Importers & Distributors</h3>
+          <div class="audience-card">
+            <h3>Buyers & Processors</h3>
             <p>
-              Frozen seafood import programmes for domestic distribution,
-              wholesale and retail channels.
+              Importers, distributors, wholesalers, food-service buyers,
+              processors and re-processors seeking specific seafood requirements.
             </p>
           </div>
 
-          <div class="who-card">
-            <h3>Processors & Re-processors</h3>
+          <div class="audience-card">
+            <h3>Supply-Side Parties</h3>
             <p>
-              Raw-material requirements for filleting, portioning, value-added
-              production, surimi and re-export.
+              Producers, vessel owners, quota holders, processors, exporters and
+              authorised representatives with selected available programmes.
             </p>
           </div>
 
-          <div class="who-card">
-            <h3>Food-Service & Specialist Buyers</h3>
+          <div class="audience-card">
+            <h3>Professional Intermediaries</h3>
             <p>
-              Selected supply programmes for HoReCa, industrial users and
-              specialist seafood channels.
+              Direct representatives and brokers working on defined opportunities,
+              subject to clear authority and commercial relevance.
             </p>
           </div>
 
@@ -812,44 +828,44 @@
     <section class="section">
       <div class="wrap">
 
-        <div class="section-kicker">How enquiries are handled</div>
+        <div class="kicker">How enquiries are handled</div>
 
         <h2>
-          Simple process. Controlled disclosure.
+          Simple process. Discreet, progressive disclosure.
         </h2>
 
-        <div class="process-grid">
+        <div class="steps">
 
           <div class="step">
-            <div class="step-number">01</div>
-            <h3>Submit Requirement</h3>
+            <div class="number">01</div>
+            <h3>Submit Enquiry</h3>
             <p>
-              Specify species, form, grade, quantity, destination and intended
-              use.
+              Provide your requirement or available programme with sufficient
+              technical and commercial detail.
             </p>
           </div>
 
           <div class="step">
-            <div class="step-number">02</div>
-            <h3>Commercial Review</h3>
+            <div class="number">02</div>
+            <h3>Initial Review</h3>
             <p>
-              We assess product fit, technical feasibility and the completeness
-              of the enquiry.
+              We assess the clarity, relevance and commercial feasibility of the
+              enquiry.
             </p>
           </div>
 
           <div class="step">
-            <div class="step-number">03</div>
+            <div class="number">03</div>
             <h3>Selected Matching</h3>
             <p>
-              Relevant opportunities are considered subject to supply-side
-              confirmation.
+              Relevant counterparties or opportunities are considered subject to
+              confirmation and qualification.
             </p>
           </div>
 
           <div class="step">
-            <div class="step-number">04</div>
-            <h3>Trade Coordination</h3>
+            <div class="number">04</div>
+            <h3>Coordination</h3>
             <p>
               Qualified opportunities progress through commercial communication
               and documentation review.
@@ -860,39 +876,37 @@
       </div>
     </section>
 
-    <section class="section enquiry-section" id="enquiry">
+    <section class="section formarea" id="enquiry">
       <div class="wrap">
 
-        <div class="section-kicker">Confidential Buyer Enquiry</div>
+        <div class="kicker">Confidential Commercial Enquiry</div>
 
         <h2>
-          Tell us exactly what you need.
+          Submit a buying requirement or an available seafood programme.
         </h2>
 
-        <div class="form-shell">
+        <div class="formbox">
 
-          <div class="form-head">
-            <h3>Submit a Buyer Requirement</h3>
-            <p>
-              Please complete the commercial and technical fields as fully as
-              possible. Enquiries with a clear product, volume and destination
-              requirement can be reviewed faster.
-            </p>
-          </div>
+          <h3>Commercial Enquiry Form</h3>
+
+          <p>
+            Please complete the fields relevant to your enquiry. Clear product,
+            volume, origin and delivery information allows a more effective
+            initial review.
+          </p>
 
           <form action="https://api.web3forms.com/submit" method="POST">
 
-            <!-- Replace this value with your own Web3Forms access key -->
             <input
               type="hidden"
               name="access_key"
-              value="REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY"
+              value="ffc71b18-d79a-4fd3-9ad3-f8c3df6a1fd1"
             >
 
             <input
               type="hidden"
               name="subject"
-              value="Confidential Buyer Enquiry — Sirena Sdn Bhd"
+              value="Confidential Commercial Enquiry — Sirena Sdn Bhd"
             >
 
             <input
@@ -904,20 +918,39 @@
             <div class="fields">
 
               <div>
-                <label for="role">I am contacting as *</label>
+                <label for="role">I Am Contacting As *</label>
+
                 <select id="role" name="role" required>
                   <option value="">Select one</option>
                   <option>Importer / Buyer</option>
                   <option>Seafood Processor / Re-processor</option>
                   <option>Distributor / Wholesaler</option>
                   <option>Food-Service Buyer</option>
-                  <option>Direct Buyer Representative</option>
+                  <option>Producer / Vessel Owner</option>
+                  <option>Quota Holder / Fishing Operator</option>
+                  <option>Primary Processor</option>
+                  <option>Exporter / Supplier</option>
+                  <option>Authorised Representative</option>
                   <option>Broker / Intermediary</option>
                 </select>
               </div>
 
               <div>
+                <label for="enquiry_type">Nature of Enquiry *</label>
+
+                <select id="enquiry_type" name="enquiry_type" required>
+                  <option value="">Select one</option>
+                  <option>Buying Requirement</option>
+                  <option>Available Supply Programme</option>
+                  <option>Market Development / Buyer Introduction</option>
+                  <option>Commercial Cooperation</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div>
                 <label for="company">Company / Legal Entity *</label>
+
                 <input
                   id="company"
                   name="company"
@@ -929,6 +962,7 @@
 
               <div>
                 <label for="name">Contact Name *</label>
+
                 <input
                   id="name"
                   name="name"
@@ -940,16 +974,18 @@
 
               <div>
                 <label for="job_title">Job Title</label>
+
                 <input
                   id="job_title"
                   name="job_title"
                   type="text"
-                  placeholder="Procurement Manager, Director, etc."
+                  placeholder="Procurement, Export, Director, etc."
                 >
               </div>
 
               <div>
                 <label for="email">Business Email *</label>
+
                 <input
                   id="email"
                   name="email"
@@ -961,6 +997,7 @@
 
               <div>
                 <label for="phone">WhatsApp / WeChat / Phone</label>
+
                 <input
                   id="phone"
                   name="phone"
@@ -971,6 +1008,7 @@
 
               <div>
                 <label for="country_city">Country / City *</label>
+
                 <input
                   id="country_city"
                   name="country_city"
@@ -982,6 +1020,7 @@
 
               <div>
                 <label for="website">Company Website</label>
+
                 <input
                   id="website"
                   name="website"
@@ -992,7 +1031,12 @@
 
               <div>
                 <label for="product_category">Product Category *</label>
-                <select id="product_category" name="product_category" required>
+
+                <select
+                  id="product_category"
+                  name="product_category"
+                  required
+                >
                   <option value="">Select one</option>
                   <option>Tuna & Large Pelagics</option>
                   <option>Wahoo / Seerfish / King Mackerel</option>
@@ -1008,7 +1052,8 @@
               </div>
 
               <div>
-                <label for="species">Requested Species / Scientific Name *</label>
+                <label for="species">Species / Scientific Name *</label>
+
                 <input
                   id="species"
                   name="species"
@@ -1020,6 +1065,7 @@
 
               <div>
                 <label for="product_form">Product Form *</label>
+
                 <select id="product_form" name="product_form" required>
                   <option value="">Select one</option>
                   <option>Whole Round / WR</option>
@@ -1043,6 +1089,7 @@
 
               <div>
                 <label for="size_grade">Size / Grade / Count</label>
+
                 <input
                   id="size_grade"
                   name="size_grade"
@@ -1052,50 +1099,54 @@
               </div>
 
               <div>
-                <label for="volume">Required Volume *</label>
+                <label for="volume">Volume *</label>
+
                 <input
                   id="volume"
                   name="volume"
                   type="text"
                   required
-                  placeholder="Trial order, MT/month or containers"
+                  placeholder="Available or required MT / containers"
                 >
               </div>
 
               <div>
-                <label for="packing">Packing Requirement</label>
+                <label for="packing">Packing / Glazing / Freezing</label>
+
                 <input
                   id="packing"
                   name="packing"
                   type="text"
-                  placeholder="Carton size, glaze, IQF/block, etc."
+                  placeholder="Carton size, IQF/block, glaze, etc."
                 >
               </div>
 
               <div>
-                <label for="origin_fao">Preferred Origin / FAO Area</label>
+                <label for="origin_fao">Origin / FAO Catch Area</label>
+
                 <input
                   id="origin_fao"
                   name="origin_fao"
                   type="text"
-                  placeholder="If applicable"
+                  placeholder="Country, area, vessel or plant if applicable"
                 >
               </div>
 
               <div>
-                <label for="destination_port">Destination Port / Delivery Area *</label>
+                <label for="port">Loading or Destination Port</label>
+
                 <input
-                  id="destination_port"
-                  name="destination_port"
+                  id="port"
+                  name="port"
                   type="text"
-                  required
                   placeholder="Port and country"
                 >
               </div>
 
               <div>
-                <label for="intended_use">Intended Use *</label>
-                <select id="intended_use" name="intended_use" required>
+                <label for="intended_use">Intended Use</label>
+
+                <select id="intended_use" name="intended_use">
                   <option value="">Select one</option>
                   <option>Domestic Distribution</option>
                   <option>Retail</option>
@@ -1113,6 +1164,7 @@
 
               <div>
                 <label for="incoterm">Preferred Incoterm</label>
+
                 <select id="incoterm" name="incoterm">
                   <option value="">Select one</option>
                   <option>EXW</option>
@@ -1124,38 +1176,44 @@
               </div>
 
               <div>
-                <label for="delivery_period">Target Delivery Period</label>
+                <label for="delivery_period">Delivery / Availability Period</label>
+
                 <input
                   id="delivery_period"
                   name="delivery_period"
                   type="text"
-                  placeholder="Month / quarter / urgency"
+                  placeholder="Month, quarter or immediate"
                 >
               </div>
 
               <div>
-                <label for="documents">Required Documents / Certifications</label>
+                <label for="documents">Documents / Certifications</label>
+
                 <input
                   id="documents"
                   name="documents"
                   type="text"
-                  placeholder="Health cert., catch cert., IUU, HACCP, MSC, Halal, etc."
+                  placeholder="Health, catch/IUU, HACCP, MSC, Halal, etc."
                 >
               </div>
 
               <div class="wide">
-                <label for="message">Additional Requirement Details *</label>
+                <label for="message">
+                  Additional Technical and Commercial Details *
+                </label>
+
                 <textarea
                   id="message"
                   name="message"
                   required
-                  placeholder="Please state target price guidance, final market, quality requirements, product photos/specifications requested, preferred payment approach, or other commercial details."
+                  placeholder="For buying enquiries: state target price, final market, monthly volume and key specifications. For supply programmes: state authority to sell, available quantity, production date, loading point, price basis and documentation available."
                 ></textarea>
               </div>
 
               <!-- Honeypot anti-spam field -->
               <div class="wide" style="display: none;">
                 <label for="botcheck">Leave this field empty</label>
+
                 <input
                   id="botcheck"
                   name="botcheck"
@@ -1169,19 +1227,20 @@
 
             <label class="consent">
               <input type="checkbox" name="consent" required>
+
               <span>
-                I confirm that the information submitted is provided for a genuine
-                commercial enquiry and I consent to Sirena Sdn Bhd contacting me
-                regarding this requirement.
+                I confirm that the information is provided for a genuine
+                commercial enquiry and consent to contact by Sirena Sdn Bhd
+                regarding this opportunity.
               </span>
             </label>
 
-            <button class="submit-button" type="submit">
-              Submit Confidential Buyer Enquiry
+            <button class="submit" type="submit">
+              Submit Confidential Commercial Enquiry
             </button>
 
-            <div class="form-note">
-              Do not submit passwords, bank-account details, payment information,
+            <div class="formnote">
+              Do not submit passwords, bank details, payment information,
               passport copies, original certificates or other highly sensitive
               documents through this form.
             </div>
@@ -1194,35 +1253,52 @@
   </main>
 
   <footer>
-    <div class="wrap footer-grid">
+    <div class="wrap footergrid">
 
       <div>
+
         <strong>Sirena Sdn Bhd</strong>
 
         <p>
-          International Frozen Seafood Trade & Sourcing. Sirena Sdn Bhd is not
-          necessarily the producer, vessel owner, quota owner, exporter of record,
-          food-safety certifier, inspection company, customs broker, legal adviser,
-          escrow agent or custodian of cargo funds.
+          International Frozen Seafood Trade & Sourcing. Sirena Sdn Bhd acts as
+          an independent commercial sourcing and trade-coordination company. It
+          is not necessarily the producer, vessel owner, quota owner, exporter
+          of record, food-safety certifier, inspection company, customs broker,
+          legal adviser, escrow agent or custodian of cargo funds.
         </p>
 
         <p class="tiny">
           Product information, specifications, documentation, availability and
-          commercial terms remain subject to confirmation by the relevant supply-side
-          party. Sales contracts, cargo payment and shipping arrangements are
-          concluded directly between the relevant buyer and seller unless otherwise
-          expressly agreed in writing.
+          commercial terms remain subject to confirmation by the relevant
+          supply-side party. Sales contracts, cargo payment and shipping
+          arrangements are concluded directly between the relevant buyer and
+          seller unless otherwise expressly agreed in writing.
         </p>
+
       </div>
 
-      <div class="legal">
+      <div class="footright">
         Malaysia · Established 2013<br>
-        <a href="#enquiry">Confidential Buyer Enquiry</a><br>
+        <a href="#enquiry">Confidential Commercial Enquiry</a><br>
         <span class="tiny">© 2026 Sirena Sdn Bhd</span>
       </div>
 
     </div>
   </footer>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector("form");
+      const submitButton = form.querySelector(".submit");
+
+      form.addEventListener("submit", function () {
+        if (form.checkValidity()) {
+          submitButton.disabled = true;
+          submitButton.textContent = "Sending Enquiry...";
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
