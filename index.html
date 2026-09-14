@@ -35,7 +35,7 @@
   <meta property="og:url" content="https://sirenasdnbhd.com/">
   <meta property="og:site_name" content="Sirena Sdn Bhd">
 
-  <!-- When your final licensed Hero image is uploaded, retain this URL -->
+  <!-- Replace after uploading a licensed Hero image -->
   <meta
     property="og:image"
     content="https://sirenasdnbhd.com/images/frozen-seafood-reefer-container-export-port.webp"
@@ -62,7 +62,7 @@
     rel="stylesheet"
   >
 
-  <!-- Organization Schema -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -94,13 +94,12 @@
       "Squid",
       "Octopus",
       "Shrimp",
-      "Shellfish",
-      "Seafood processing raw material"
+      "Shellfish"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "commercial enquiries",
-      "url": "https://sirenasdnbhd.com/#buyer-enquiry",
+      "url": "https://sirenasdnbhd.com/#enquiry",
       "availableLanguage": [
         "English",
         "Persian"
@@ -151,11 +150,9 @@
     /* HERO */
 
     .hero {
-      position: relative;
       min-height: 650px;
       padding: 25px 0 72px;
-      overflow: hidden;
-      color: var(--white);
+      color: #ffffff;
 
       /*
       AFTER YOU UPLOAD YOUR FINAL LICENSED HERO IMAGE:
@@ -201,7 +198,7 @@
       display: flex;
       align-items: center;
       gap: 13px;
-      color: var(--white);
+      color: #ffffff;
       text-decoration: none;
     }
 
@@ -237,7 +234,7 @@
       display: inline-block;
       padding: 11px 17px;
       border: 1px solid var(--gold-soft);
-      color: var(--white);
+      color: #ffffff;
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.1em;
@@ -300,7 +297,6 @@
       font-size: clamp(18px, 2vw, 23px);
       font-weight: 400;
       line-height: 1.35;
-      letter-spacing: 0;
     }
 
     .regions {
@@ -333,7 +329,7 @@
     .hero-note strong {
       display: block;
       margin-bottom: 8px;
-      color: var(--white);
+      color: #ffffff;
       font-size: 16px;
     }
 
@@ -343,7 +339,7 @@
       font-size: 14px;
     }
 
-    /* GENERAL SECTIONS */
+    /* GENERAL */
 
     .section {
       padding: 78px 0;
@@ -382,10 +378,10 @@
       font-size: 14px;
     }
 
-    /* BUYERS / SUPPLIERS */
+    /* BUYERS AND SUPPLIERS */
 
     .split-section {
-      background: var(--white);
+      background: #ffffff;
     }
 
     .split-grid {
@@ -399,7 +395,7 @@
       min-height: 270px;
       padding: 34px;
       border: 1px solid var(--line);
-      background: var(--white);
+      background: #ffffff;
     }
 
     .split-card h3 {
@@ -422,10 +418,10 @@
       line-height: 1.9;
     }
 
-    /* INTERNATIONAL MARKETS */
+    /* MARKETS */
 
     .markets {
-      color: var(--white);
+      color: #ffffff;
       background: var(--deep);
     }
 
@@ -434,7 +430,7 @@
     }
 
     .markets h2 {
-      color: var(--white);
+      color: #ffffff;
     }
 
     .markets-grid {
@@ -458,7 +454,7 @@
       font-size: 16px;
     }
 
-    /* WORKFLOW */
+    /* HOW WE WORK */
 
     .steps {
       display: grid;
@@ -503,94 +499,90 @@
       font-size: 15px;
     }
 
-    .formbox {
-      margin-top: 38px;
-      padding: 36px;
-      border: 1px solid var(--line);
-      background: var(--white);
+    .dual-forms {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      align-items: start;
+      margin-top: 32px;
     }
 
-    .supplier-form {
-      margin-top: 28px;
-    }
-
-    .formbox h3 {
+    .mini-form {
       margin: 0;
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 29px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      background: #ffffff;
     }
 
-    .formbox > p {
-      max-width: 720px;
-      margin: 6px 0 26px;
+    .mini-form h3 {
+      margin: 0 0 7px;
+      color: var(--deep);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 26px;
+      line-height: 1.2;
+    }
+
+    .mini-form p {
+      min-height: 42px;
+      margin: 0 0 20px;
       color: var(--muted);
       font-size: 14px;
     }
 
-    .fields {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 17px;
-    }
-
-    .wide {
-      grid-column: 1 / -1;
-    }
-
-    label {
+    .mini-form label {
       display: block;
-      margin-bottom: 6px;
+      margin: 0 0 6px;
       color: #38565c;
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.04em;
     }
 
-    input,
-    select,
-    textarea {
+    .mini-form input,
+    .mini-form textarea {
       width: 100%;
+      margin-bottom: 14px;
       padding: 12px 13px;
       border: 1px solid #ccd9d7;
-      border-radius: 0;
       background: #fbfdfc;
       color: var(--ink);
       font-family: "DM Sans", Arial, sans-serif;
       font-size: 14px;
     }
 
-    textarea {
-      min-height: 145px;
+    .mini-form textarea {
+      min-height: 115px;
       resize: vertical;
     }
 
-    input:focus,
-    select:focus,
-    textarea:focus {
+    .mini-form input:focus,
+    .mini-form textarea:focus {
       outline: 2px solid rgba(25, 121, 134, 0.2);
       border-color: var(--teal);
     }
 
-    .consent {
+    .mini-form .consent {
       display: flex;
       align-items: flex-start;
-      gap: 9px;
-      margin: 18px 0;
+      gap: 8px;
+      margin: 2px 0 16px;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 11px;
+      line-height: 1.45;
     }
 
-    .consent input {
+    .mini-form .consent input {
       width: auto;
-      margin-top: 4px;
+      margin: 3px 0 0;
     }
 
-    .submit {
-      padding: 14px 21px;
+    .mini-form .submit {
+      width: 100%;
+      padding: 13px 16px;
       border: 0;
       background: var(--deep);
-      color: var(--white);
-      font-size: 12px;
+      color: #ffffff;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -598,19 +590,24 @@
       transition: background 0.2s ease;
     }
 
-    .submit:hover {
+    .mini-form .submit:hover {
       background: var(--teal);
     }
 
-    .submit:disabled {
+    .mini-form .submit:disabled {
       cursor: wait;
       opacity: 0.75;
     }
 
-    .formnote {
-      margin-top: 15px;
+    .form-note-small {
+      margin-top: 18px;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .honeypot {
+      display: none;
     }
 
     /* FOOTER */
@@ -629,7 +626,7 @@
     }
 
     footer strong {
-      color: var(--white);
+      color: #ffffff;
     }
 
     footer p {
@@ -682,7 +679,7 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .fields {
+      .dual-forms {
         grid-template-columns: 1fr;
       }
 
@@ -734,8 +731,8 @@
         text-align: center;
       }
 
-      .formbox {
-        padding: 23px;
+      .mini-form {
+        padding: 22px;
       }
     }
   </style>
@@ -1034,664 +1031,236 @@
       </div>
     </section>
 
+    <!-- TWO SMALL FORMS SIDE BY SIDE -->
+
     <section class="section formarea" id="enquiry">
       <div class="wrap">
 
         <div class="kicker">Confidential Commercial Enquiries</div>
 
         <h2>
-          Buying requirements and available supply programmes.
+          Buying requirements and available supply.
         </h2>
 
         <div class="form-intro">
-          Please use the form that matches your commercial purpose. All
+          Please select the form that matches your commercial purpose. All
           enquiries are reviewed discreetly and on a transaction-by-transaction
           basis.
         </div>
 
-        <!-- BUYER FORM -->
+        <div class="dual-forms">
 
-        <div class="formbox" id="buyer-enquiry">
+          <!-- BUYER FORM -->
 
-          <h3>I Have a Buying Requirement</h3>
+          <div class="mini-form" id="buyer-enquiry">
 
-          <p>
-            For importers, processors, distributors, wholesalers, food-service
-            buyers and authorised buyer representatives.
-          </p>
+            <h3>I Have a Buying Requirement</h3>
 
-          <form action="https://api.web3forms.com/submit" method="POST">
+            <p>
+              For importers, processors, distributors and qualified buyers.
+            </p>
 
-            <input
-              type="hidden"
-              name="access_key"
-              value="ffc71b18-d79a-4fd3-9ad3-f8c3df6a1fd1"
-            >
+            <form action="https://api.web3forms.com/submit" method="POST">
 
-            <input
-              type="hidden"
-              name="subject"
-              value="Buyer Requirement — Sirena Sdn Bhd"
-            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="ffc71b18-d79a-4fd3-9ad3-f8c3df6a1fd1"
+              >
 
-            <input
-              type="hidden"
-              name="enquiry_source"
-              value="Website Buyer Requirement Form"
-            >
+              <input
+                type="hidden"
+                name="subject"
+                value="Buyer Requirement — Sirena Sdn Bhd"
+              >
 
-            <input
-              type="hidden"
-              name="enquiry_type"
-              value="Buying Requirement"
-            >
+              <input
+                type="hidden"
+                name="enquiry_type"
+                value="Buyer Requirement"
+              >
 
-            <div class="fields">
+              <label for="buyer-name">
+                Name / Company *
+              </label>
 
-              <div>
+              <input
+                id="buyer-name"
+                name="name_company"
+                type="text"
+                required
+                placeholder="Name and company"
+              >
 
-                <label for="buyer-role">I Am Contacting As *</label>
+              <label for="buyer-email">
+                Business Email *
+              </label>
 
-                <select id="buyer-role" name="buyer_role" required>
-                  <option value="">Select one</option>
-                  <option>Importer / Buyer</option>
-                  <option>Seafood Processor / Re-processor</option>
-                  <option>Distributor / Wholesaler</option>
-                  <option>Food-Service Buyer</option>
-                  <option>Direct Buyer Representative</option>
-                  <option>Broker / Intermediary</option>
-                </select>
+              <input
+                id="buyer-email"
+                name="email"
+                type="email"
+                required
+                placeholder="name@company.com"
+              >
 
-              </div>
+              <label for="buyer-product">
+                Product / Requirement *
+              </label>
 
-              <div>
+              <input
+                id="buyer-product"
+                name="product_requirement"
+                type="text"
+                required
+                placeholder="e.g. Hake HGT, Yellowfin Tuna, Wahoo"
+              >
 
-                <label for="buyer-company">Company / Legal Entity *</label>
+              <label for="buyer-message">
+                Details *
+              </label>
 
+              <textarea
+                id="buyer-message"
+                name="message"
+                required
+                placeholder="Volume, size, form, packing, destination port, delivery period and any commercial requirements."
+              ></textarea>
+
+              <div class="honeypot">
                 <input
-                  id="buyer-company"
-                  name="company"
-                  type="text"
-                  required
-                  placeholder="Company name"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="buyer-name">Contact Name *</label>
-
-                <input
-                  id="buyer-name"
-                  name="name"
-                  type="text"
-                  required
-                  placeholder="Full name"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="buyer-title">Job Title</label>
-
-                <input
-                  id="buyer-title"
-                  name="job_title"
-                  type="text"
-                  placeholder="Procurement, Import, Director, etc."
-                >
-
-              </div>
-
-              <div>
-
-                <label for="buyer-email">Business Email *</label>
-
-                <input
-                  id="buyer-email"
-                  name="email"
-                  type="email"
-                  required
-                  placeholder="name@company.com"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="buyer-phone">WhatsApp / WeChat / Phone</label>
-
-                <input
-                  id="buyer-phone"
-                  name="phone"
-                  type="text"
-                  placeholder="Include country code"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="buyer-country">Country / City *</label>
-
-                <input
-                  id="buyer-country"
-                  name="country_city"
-                  type="text"
-                  required
-                  placeholder="Country and city"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="buyer-website">Company Website</label>
-
-                <input
-                  id="buyer-website"
-                  name="website"
-                  type="url"
-                  placeholder="https://"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="buyer-category">Product Category *</label>
-
-                <select
-                  id="buyer-category"
-                  name="product_category"
-                  required
-                >
-                  <option value="">Select one</option>
-                  <option>Tuna & Large Pelagics</option>
-                  <option>Wahoo / Seerfish / Mackerel</option>
-                  <option>Whitefish / Groundfish / Flatfish</option>
-                  <option>Squid / Octopus / Cuttlefish</option>
-                  <option>Shrimp / Shellfish</option>
-                  <option>Other Seafood Product</option>
-                </select>
-
-              </div>
-
-              <div>
-
-                <label for="buyer-species">Species / Product *</label>
-
-                <input
-                  id="buyer-species"
-                  name="species"
-                  type="text"
-                  required
-                  placeholder="e.g. Yellowfin Tuna, Hake, Wahoo"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="buyer-presentation">
-                  Presentation / Processing Form *
-                </label>
-
-                <select
-                  id="buyer-presentation"
-                  name="presentation"
-                  required
-                >
-                  <option value="">Select one</option>
-                  <option>Whole Fish</option>
-                  <option>Headed / Gutted</option>
-                  <option>Fillet / Loin / Steak</option>
-                  <option>IQF / Block Frozen</option>
-                  <option>Other / To be specified</option>
-                </select>
-
-              </div>
-
-              <div>
-
-                <label for="buyer-volume">Required Volume *</label>
-
-                <input
-                  id="buyer-volume"
-                  name="required_volume"
-                  type="text"
-                  required
-                  placeholder="MT, cartons or containers"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="buyer-port">Destination Port *</label>
-
-                <input
-                  id="buyer-port"
-                  name="destination_port"
-                  type="text"
-                  required
-                  placeholder="Port and country"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="buyer-incoterm">Preferred Incoterm</label>
-
-                <select id="buyer-incoterm" name="incoterm">
-                  <option value="">Select one</option>
-                  <option>FOB</option>
-                  <option>CFR</option>
-                  <option>CIF</option>
-                  <option>To be discussed</option>
-                </select>
-
-              </div>
-
-              <div class="wide">
-
-                <label for="buyer-message">Requirement Details *</label>
-
-                <textarea
-                  id="buyer-message"
-                  name="message"
-                  required
-                  placeholder="Please include size or grade, packing requirement, monthly or annual volume, target delivery period, final market, required documents, target price indication and other key requirements."
-                ></textarea>
-
-              </div>
-
-              <div class="wide" style="display: none;">
-
-                <label for="buyer-botcheck">Leave this field empty</label>
-
-                <input
-                  id="buyer-botcheck"
                   name="botcheck"
                   type="text"
                   tabindex="-1"
                   autocomplete="off"
                 >
-
               </div>
 
-            </div>
+              <label class="consent">
+                <input type="checkbox" name="consent" required>
 
-            <label class="consent">
+                <span>
+                  I confirm that this is a genuine commercial buying enquiry.
+                </span>
+              </label>
 
-              <input type="checkbox" name="consent" required>
+              <button class="submit" type="submit">
+                Submit Buying Requirement
+              </button>
 
-              <span>
-                I confirm that this is a genuine commercial buying requirement
-                and consent to contact by Sirena Sdn Bhd regarding this enquiry.
-              </span>
+            </form>
 
-            </label>
+          </div>
 
-            <button class="submit" type="submit">
-              Submit Buying Requirement
-            </button>
+          <!-- SUPPLIER FORM -->
 
-          </form>
+          <div class="mini-form" id="supplier-enquiry">
 
-        </div>
+            <h3>I Have Available Supply</h3>
 
-        <!-- SUPPLIER / SELLER FORM -->
+            <p>
+              For producers, exporters, vessel owners and authorised
+              representatives.
+            </p>
 
-        <div class="formbox supplier-form" id="supplier-enquiry">
+            <form action="https://api.web3forms.com/submit" method="POST">
 
-          <h3>I Have Available Supply</h3>
+              <input
+                type="hidden"
+                name="access_key"
+                value="ffc71b18-d79a-4fd3-9ad3-f8c3df6a1fd1"
+              >
 
-          <p>
-            For producers, vessel owners, quota holders, primary processors,
-            exporters, authorised representatives and commercial brokers.
-          </p>
+              <input
+                type="hidden"
+                name="subject"
+                value="Available Seafood Supply — Sirena Sdn Bhd"
+              >
 
-          <form action="https://api.web3forms.com/submit" method="POST">
+              <input
+                type="hidden"
+                name="enquiry_type"
+                value="Available Seafood Supply"
+              >
 
-            <input
-              type="hidden"
-              name="access_key"
-              value="ffc71b18-d79a-4fd3-9ad3-f8c3df6a1fd1"
-            >
+              <label for="supplier-name">
+                Name / Company *
+              </label>
 
-            <input
-              type="hidden"
-              name="subject"
-              value="Available Seafood Supply Programme — Sirena Sdn Bhd"
-            >
+              <input
+                id="supplier-name"
+                name="name_company"
+                type="text"
+                required
+                placeholder="Name and company"
+              >
 
-            <input
-              type="hidden"
-              name="enquiry_source"
-              value="Website Supply Programme Form"
-            >
+              <label for="supplier-email">
+                Business Email *
+              </label>
 
-            <input
-              type="hidden"
-              name="enquiry_type"
-              value="Available Supply Programme"
-            >
+              <input
+                id="supplier-email"
+                name="email"
+                type="email"
+                required
+                placeholder="name@company.com"
+              >
 
-            <div class="fields">
+              <label for="supplier-product">
+                Product / Available Supply *
+              </label>
 
-              <div>
+              <input
+                id="supplier-product"
+                name="product_supply"
+                type="text"
+                required
+                placeholder="e.g. Frozen Mackerel, Skipjack Tuna, Squid"
+              >
 
-                <label for="supplier-role">I Am Contacting As *</label>
+              <label for="supplier-message">
+                Details *
+              </label>
 
-                <select id="supplier-role" name="supplier_role" required>
-                  <option value="">Select one</option>
-                  <option>Producer</option>
-                  <option>Vessel Owner / Fishing Operator</option>
-                  <option>Quota Holder</option>
-                  <option>Primary Processor</option>
-                  <option>Exporter / Supplier</option>
-                  <option>Authorised Representative</option>
-                  <option>Broker / Intermediary</option>
-                </select>
+              <textarea
+                id="supplier-message"
+                name="message"
+                required
+                placeholder="Origin, quantity, product form, size, packing, loading port, availability, price basis and documents available."
+              ></textarea>
 
-              </div>
-
-              <div>
-
-                <label for="supplier-company">Company / Legal Entity *</label>
-
+              <div class="honeypot">
                 <input
-                  id="supplier-company"
-                  name="company"
-                  type="text"
-                  required
-                  placeholder="Company name"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="supplier-name">Contact Name *</label>
-
-                <input
-                  id="supplier-name"
-                  name="name"
-                  type="text"
-                  required
-                  placeholder="Full name"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="supplier-title">Job Title</label>
-
-                <input
-                  id="supplier-title"
-                  name="job_title"
-                  type="text"
-                  placeholder="Export Manager, Director, etc."
-                >
-
-              </div>
-
-              <div>
-
-                <label for="supplier-email">Business Email *</label>
-
-                <input
-                  id="supplier-email"
-                  name="email"
-                  type="email"
-                  required
-                  placeholder="name@company.com"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="supplier-phone">WhatsApp / WeChat / Phone</label>
-
-                <input
-                  id="supplier-phone"
-                  name="phone"
-                  type="text"
-                  placeholder="Include country code"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="supplier-country">Country / City *</label>
-
-                <input
-                  id="supplier-country"
-                  name="country_city"
-                  type="text"
-                  required
-                  placeholder="Country and city"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="supplier-website">Company Website</label>
-
-                <input
-                  id="supplier-website"
-                  name="website"
-                  type="url"
-                  placeholder="https://"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="supplier-category">Product Category *</label>
-
-                <select
-                  id="supplier-category"
-                  name="product_category"
-                  required
-                >
-                  <option value="">Select one</option>
-                  <option>Tuna & Large Pelagics</option>
-                  <option>Wahoo / Seerfish / Mackerel</option>
-                  <option>Whitefish / Groundfish / Flatfish</option>
-                  <option>Squid / Octopus / Cuttlefish</option>
-                  <option>Shrimp / Shellfish</option>
-                  <option>Other Seafood Product</option>
-                </select>
-
-              </div>
-
-              <div>
-
-                <label for="supplier-species">Species / Product *</label>
-
-                <input
-                  id="supplier-species"
-                  name="species"
-                  type="text"
-                  required
-                  placeholder="e.g. Skipjack Tuna, Jack Mackerel, Hake"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="supplier-presentation">
-                  Presentation / Processing Form *
-                </label>
-
-                <select
-                  id="supplier-presentation"
-                  name="presentation"
-                  required
-                >
-                  <option value="">Select one</option>
-                  <option>Whole Fish</option>
-                  <option>Headed / Gutted</option>
-                  <option>Fillet / Loin / Steak</option>
-                  <option>IQF / Block Frozen</option>
-                  <option>Other / To be specified</option>
-                </select>
-
-              </div>
-
-              <div>
-
-                <label for="supplier-volume">Available Volume *</label>
-
-                <input
-                  id="supplier-volume"
-                  name="available_volume"
-                  type="text"
-                  required
-                  placeholder="MT, cartons or containers"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="supplier-origin">Origin / FAO Area</label>
-
-                <input
-                  id="supplier-origin"
-                  name="origin_fao_area"
-                  type="text"
-                  placeholder="Country, fishing area or FAO zone"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="supplier-port">Loading Port</label>
-
-                <input
-                  id="supplier-port"
-                  name="loading_port"
-                  type="text"
-                  placeholder="Port and country"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="supplier-availability">
-                  Availability Period
-                </label>
-
-                <input
-                  id="supplier-availability"
-                  name="availability_period"
-                  type="text"
-                  placeholder="Immediate, month, season or production date"
-                >
-
-              </div>
-
-              <div>
-
-                <label for="supplier-incoterm">
-                  Price Basis / Incoterm
-                </label>
-
-                <select id="supplier-incoterm" name="incoterm">
-                  <option value="">Select one</option>
-                  <option>EXW</option>
-                  <option>FOB</option>
-                  <option>CFR</option>
-                  <option>CIF</option>
-                  <option>To be discussed</option>
-                </select>
-
-              </div>
-
-              <div>
-
-                <label for="supplier-documents">
-                  Documents / Certifications
-                </label>
-
-                <input
-                  id="supplier-documents"
-                  name="documents"
-                  type="text"
-                  placeholder="Health, catch/IUU, HACCP, MSC, Halal, etc."
-                >
-
-              </div>
-
-              <div class="wide">
-
-                <label for="supplier-message">
-                  Available Programme Details *
-                </label>
-
-                <textarea
-                  id="supplier-message"
-                  name="message"
-                  required
-                  placeholder="Please include size or grade, packing, freezing method, glazing, production date, available quantity, price indication, loading schedule, documents available and your authority to sell or represent the product."
-                ></textarea>
-
-              </div>
-
-              <div class="wide" style="display: none;">
-
-                <label for="supplier-botcheck">Leave this field empty</label>
-
-                <input
-                  id="supplier-botcheck"
                   name="botcheck"
                   type="text"
                   tabindex="-1"
                   autocomplete="off"
                 >
-
               </div>
 
-            </div>
+              <label class="consent">
+                <input type="checkbox" name="consent" required>
 
-            <label class="consent">
+                <span>
+                  I confirm that I am authorised to submit this commercial supply
+                  information.
+                </span>
+              </label>
 
-              <input type="checkbox" name="consent" required>
+              <button class="submit" type="submit">
+                Submit Available Supply
+              </button>
 
-              <span>
-                I confirm that the information is provided for a genuine
-                commercial seafood supply programme and that I have authority to
-                submit this information for commercial review.
-              </span>
+            </form>
 
-            </label>
-
-            <button class="submit" type="submit">
-              Submit Available Supply Programme
-            </button>
-
-          </form>
+          </div>
 
         </div>
 
-        <div class="formnote">
-          Do not submit passwords, bank-account details, payment instructions,
-          passport copies, original certificates or other highly sensitive
-          documents through these forms.
+        <div class="form-note-small">
+          Do not submit bank details, payment information, passport copies,
+          original certificates or highly sensitive documents through these forms.
         </div>
 
       </div>
@@ -1727,7 +1296,7 @@
       <div class="footright">
         Malaysia · Established 2013<br>
         <a href="#buyer-enquiry">Buyer Enquiry</a><br>
-        <a href="#supplier-enquiry">Supply Programme</a><br>
+        <a href="#supplier-enquiry">Available Supply</a><br>
         <span class="tiny">© 2026 Sirena Sdn Bhd</span>
       </div>
 
