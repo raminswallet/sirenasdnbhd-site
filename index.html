@@ -72,16 +72,17 @@
   <style>
     :root {
       --deep: #061b28;
-      --deep-soft: #0b2a39;
-      --ink: #102d3b;
-      --teal: #197986;
-      --teal-light: #eaf3f1;
-      --sand: #f6f2ea;
-      --white: #ffffff;
-      --muted: #60747a;
-      --line: #d7e1df;
+      --deep-2: #0b2b38;
+      --panel: #103846;
+      --panel-2: #123f4a;
+      --ink: #183943;
+      --teal: #5aa6a5;
+      --cream: #f2ede2;
+      --muted: #a9c1bd;
+      --muted-dark: #5d7173;
       --gold: #dcc486;
       --gold-soft: #ead9a8;
+      --line: rgba(220, 196, 134, 0.30);
     }
 
     * {
@@ -94,7 +95,7 @@
 
     body {
       margin: 0;
-      background: var(--sand);
+      background: var(--cream);
       color: var(--ink);
       font-family: "DM Sans", Arial, sans-serif;
       font-size: 16px;
@@ -113,14 +114,16 @@
       min-height: 610px;
       padding: 25px 0 72px;
       color: #ffffff;
+
       background:
         linear-gradient(
           100deg,
-          rgba(4, 23, 34, 0.98) 0%,
+          rgba(4, 23, 34, 0.98),
           rgba(5, 41, 53, 0.91) 54%,
-          rgba(8, 66, 77, 0.70) 100%
+          rgba(8, 66, 77, 0.70)
         ),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'%3E%3Crect width='1600' height='900' fill='%230a4351'/%3E%3Cpath d='M0 620 C185 510 350 700 585 608 S1010 490 1325 614 S1490 668 1600 610 V900 H0Z' fill='%231b7d88' opacity='.44'/%3E%3Cpath d='M0 700 C190 605 415 760 672 665 S1182 594 1600 718 V900 H0Z' fill='%237cc3ba' opacity='.18'/%3E%3Cpath d='M0 760 C280 670 530 820 822 720 S1290 692 1600 777 V900 H0Z' fill='%23c7e4d4' opacity='.08'/%3E%3C/svg%3E");
+
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -137,7 +140,7 @@
     }
 
     .brand {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       gap: 13px;
       color: #ffffff;
@@ -146,18 +149,17 @@
 
     .brand-mark {
       display: grid;
-      width: 54px;
-      height: 54px;
-      flex: 0 0 54px;
+      width: 52px;
+      height: 52px;
+      flex: 0 0 52px;
       place-items: center;
-      border: 1px solid rgba(220, 196, 134, 0.70);
+      border: 1px solid rgba(220, 196, 134, 0.62);
       border-radius: 50%;
-      background: rgba(6, 27, 40, 0.18);
+      background: rgba(255, 255, 255, 0.04);
     }
 
-    .brand-copy b {
+    .brand b {
       display: block;
-      color: #ffffff;
       font-size: 18px;
       font-weight: 700;
       letter-spacing: 0.16em;
@@ -165,7 +167,7 @@
       text-transform: uppercase;
     }
 
-    .brand-copy small {
+    .brand small {
       display: block;
       margin-top: 4px;
       color: var(--gold);
@@ -207,7 +209,7 @@
       background: #ffffff;
     }
 
-    /* Hero copy */
+    /* Hero text */
 
     .hero-main {
       max-width: 780px;
@@ -256,7 +258,7 @@
       gap: 12px;
     }
 
-    /* Main content */
+    /* Intro */
 
     .section {
       padding: 64px 0;
@@ -277,11 +279,11 @@
 
     .intro p {
       margin: 0;
-      color: var(--muted);
+      color: var(--muted-dark);
       font-size: 17px;
     }
 
-    /* Buyer / supplier cards */
+    /* Buyer / supplier */
 
     .cards {
       display: grid;
@@ -292,8 +294,8 @@
 
     .card {
       padding: 31px;
-      border: 1px solid var(--line);
-      background: var(--white);
+      border: 1px solid #d6d0c3;
+      background: #eee9de;
     }
 
     .card h2 {
@@ -304,21 +306,22 @@
 
     .card p {
       margin: 0 0 15px;
-      color: var(--muted);
+      color: var(--muted-dark);
       font-size: 15px;
     }
 
     .line {
-      color: var(--teal);
+      color: #2b7073;
       font-size: 14px;
       font-weight: 600;
       line-height: 1.85;
     }
 
-    /* Forms */
+    /* Forms: dark and aligned with hero */
 
     .enquiries {
-      background: var(--teal-light);
+      color: #ffffff;
+      background: var(--deep-2);
     }
 
     .enquiry-head {
@@ -328,7 +331,7 @@
     }
 
     .kicker {
-      color: var(--teal);
+      color: var(--gold);
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.18em;
@@ -337,6 +340,7 @@
 
     .enquiry-head h2 {
       margin: 8px 0;
+      color: #ffffff;
       font-family: "Playfair Display", Georgia, serif;
       font-size: 34px;
       line-height: 1.18;
@@ -344,7 +348,7 @@
 
     .enquiry-head p {
       margin: 0;
-      color: var(--muted);
+      color: #bed0cc;
       font-size: 14px;
     }
 
@@ -357,13 +361,19 @@
     }
 
     .form-card {
-      padding: 26px;
+      padding: 27px;
       border: 1px solid var(--line);
-      background: var(--white);
+      background: linear-gradient(
+        145deg,
+        rgba(19, 63, 74, 0.98),
+        rgba(10, 42, 53, 0.98)
+      );
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
     }
 
     .form-card h3 {
       margin: 0 0 5px;
+      color: #ffffff;
       font-family: "Playfair Display", Georgia, serif;
       font-size: 24px;
     }
@@ -371,14 +381,14 @@
     .form-card > p {
       min-height: 40px;
       margin: 0 0 18px;
-      color: var(--muted);
+      color: #b9ceca;
       font-size: 13px;
     }
 
     label {
       display: block;
       margin: 0 0 5px;
-      color: #38565c;
+      color: var(--gold-soft);
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.04em;
@@ -389,11 +399,17 @@
       width: 100%;
       margin: 0 0 12px;
       padding: 11px 12px;
-      border: 1px solid #ccd9d7;
-      background: #fbfdfc;
-      color: var(--ink);
+      border: 1px solid rgba(202, 223, 216, 0.28);
+      background: rgba(3, 22, 30, 0.35);
+      color: #f5f1e8;
       font-family: "DM Sans", Arial, sans-serif;
       font-size: 14px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #9bb4b1;
+      opacity: 1;
     }
 
     textarea {
@@ -403,8 +419,9 @@
 
     input:focus,
     textarea:focus {
-      outline: 2px solid rgba(25, 121, 134, 0.18);
-      border-color: var(--teal);
+      outline: 2px solid rgba(220, 196, 134, 0.26);
+      border-color: var(--gold);
+      background: rgba(3, 22, 30, 0.52);
     }
 
     .consent {
@@ -412,7 +429,7 @@
       align-items: flex-start;
       gap: 8px;
       margin: 2px 0 14px;
-      color: var(--muted);
+      color: #b9ceca;
       font-size: 11px;
       line-height: 1.45;
     }
@@ -420,14 +437,15 @@
     .consent input {
       width: auto;
       margin: 3px 0 0;
+      accent-color: var(--gold);
     }
 
     .submit {
       width: 100%;
       padding: 13px 14px;
-      border: 0;
-      background: var(--deep);
-      color: #ffffff;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: var(--deep);
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.1em;
@@ -436,7 +454,8 @@
     }
 
     .submit:hover {
-      background: var(--teal);
+      border-color: #f0dfa8;
+      background: #f0dfa8;
     }
 
     .submit:disabled {
@@ -451,7 +470,7 @@
     .form-note {
       max-width: 690px;
       margin: 17px auto 0;
-      color: var(--muted);
+      color: #a9c1bd;
       font-size: 11px;
       text-align: center;
     }
@@ -461,7 +480,7 @@
     footer {
       padding: 28px 0;
       color: #bdd0ce;
-      background: #051821;
+      background: #04161f;
     }
 
     .footer {
@@ -486,7 +505,7 @@
       text-decoration: none;
     }
 
-    /* Mobile */
+    /* Responsive */
 
     @media (max-width: 750px) {
       .hero {
@@ -534,12 +553,12 @@
         flex-basis: 45px;
       }
 
-      .brand-copy b {
+      .brand b {
         font-size: 15px;
         letter-spacing: 0.12em;
       }
 
-      .brand-copy small {
+      .brand small {
         font-size: 8px;
         letter-spacing: 0.13em;
       }
@@ -585,60 +604,38 @@
 
           <span class="brand-mark" aria-hidden="true">
 
-            <!-- Inline SVG logo: no separate file required -->
-
             <svg
-              width="37"
-              height="37"
+              width="31"
+              height="31"
               viewBox="0 0 64 64"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
 
               <path
-                d="M13 35.5C19.5 25.5 28.3 21 39.5 21
-                C46 21 51.2 23.2 55 27.2
-                C49.6 30.6 44.6 34.6 39.7 39.2
-                C32 46.5 23.1 47.6 13 42
-                C18.2 40.9 22 38.8 25 35.5
-                C21.8 32.8 17.8 32.6 13 35.5Z"
-                stroke="#DCC486"
-                stroke-width="2.5"
+                d="M33 10c7 4 10 11 8 18-1 5-5 8-9 10
+                   7 1 13 5 16 11-8 1-15-1-20-6
+                   -4-4-6-10-5-16 1-8 4-13 10-17Z"
+                stroke="#dcc486"
+                stroke-width="2.4"
                 stroke-linejoin="round"
               />
 
               <path
-                d="M25 35.5
-                C29.2 32 33.7 30.1 39.5 29.8
-                C43.4 29.6 46.6 30.2 49.7 31.8"
-                stroke="#DCC486"
-                stroke-width="2.5"
-                stroke-linecap="round"
-              />
-
-              <path
-                d="M31 19
-                C35.5 13.8 41.4 11.6 47.4 12
-                C46.5 17.7 43.3 21.4 38.5 23.7"
-                stroke="#DCC486"
-                stroke-width="2.5"
+                d="M22 28c-6 2-10 7-11 14
+                   5-1 9 0 13 3
+                   -1 5-5 9-10 11
+                   8 1 16-3 20-10"
+                stroke="#dcc486"
+                stroke-width="2.4"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
 
-              <circle
-                cx="43.5"
-                cy="26.4"
-                r="1.5"
-                fill="#DCC486"
-              />
-
               <path
-                d="M14 50
-                C23 45.6 31 47.5 38.2 51.8
-                C43.3 54.8 48.3 55.4 53 53.4"
-                stroke="#DCC486"
-                stroke-width="2.2"
+                d="M30 19c-3 3-4 7-3 11"
+                stroke="#dcc486"
+                stroke-width="2.4"
                 stroke-linecap="round"
               />
 
@@ -646,7 +643,7 @@
 
           </span>
 
-          <span class="brand-copy">
+          <span>
             <b>Sirena Sdn Bhd</b>
             <small>International Seafood Trade</small>
           </span>
@@ -774,8 +771,6 @@
 
         <div class="forms">
 
-          <!-- Buyer form -->
-
           <article class="form-card" id="buyer-enquiry">
 
             <h3>I Have a Buying Requirement</h3>
@@ -784,10 +779,7 @@
               For importers, processors, distributors and qualified buyers.
             </p>
 
-            <form
-              action="https://api.web3forms.com/submit"
-              method="POST"
-            >
+            <form action="https://api.web3forms.com/submit" method="POST">
 
               <input
                 type="hidden"
@@ -878,8 +870,6 @@
 
           </article>
 
-          <!-- Supplier form -->
-
           <article class="form-card" id="supplier-enquiry">
 
             <h3>I Have Available Supply</h3>
@@ -889,10 +879,7 @@
               representatives.
             </p>
 
-            <form
-              action="https://api.web3forms.com/submit"
-              method="POST"
-            >
+            <form action="https://api.web3forms.com/submit" method="POST">
 
               <input
                 type="hidden"
