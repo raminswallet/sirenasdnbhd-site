@@ -1,1 +1,332 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sirena Sdn Bhd | Frozen Seafood Trading & Bulk Supply</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #08111f;
+            --panel-bg: rgba(14, 27, 45, 0.75);
+            --border-color: rgba(185, 212, 232, 0.15);
+            --accent-blue: #38bdf8;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --silver-light: #b9d4e8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2rem 1rem;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(14, 27, 45, 0.8) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 3rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #1e3a8a, #0284c7);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--text-main);
+            text-transform: uppercase;
+        }
+
+        .logo-sub {
+            font-size: 0.75rem;
+            color: var(--accent-blue);
+            display: block;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+        }
+
+        .badge {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-blue);
+            padding: 0.35rem 0.85rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        @media (max-width: 868px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--panel-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--silver-light);
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .spec-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .spec-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.6rem 0;
+            border-bottom: 1px dashed rgba(185, 212, 232, 0.1);
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        .spec-item svg {
+            color: var(--accent-blue);
+            flex-shrink: 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+            font-weight: 500;
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: rgba(8, 17, 31, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-main);
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 0.9rem;
+            background: linear-gradient(135deg, #0284c7, #1d4ed8);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-submit:hover {
+            opacity: 0.9;
+        }
+
+        .watermark {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .disclaimer {
+            max-width: 650px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z"/>
+                        <path d="M12 6v12M6 12h12"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="logo-text">Sirena Sdn Bhd</span>
+                    <span class="logo-sub">FROZEN SEAFOOD TRADING DESK</span>
+                </div>
+            </a>
+            <span class="badge">Official Corporate Portal</span>
+        </header>
+
+        <div class="main-grid">
+            <div class="card">
+                <h1 class="card-title">International Frozen Seafood Supply & Brokerage</h1>
+                <p class="card-desc">
+                    Sirena Sdn Bhd operates as a dedicated B2B trading & commercial brokerage desk specializing in bulk frozen seafood sourcing, processing coordination, and vessel-to-vessel / shore-based supply logistics.
+                </p>
+                
+                <ul class="spec-list">
+                    <li class="spec-item">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span><strong>Origins & Processing:</strong> Direct origin Sourcing & Certified Processing Options</span>
+                    </li>
+                    <li class="spec-item">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span><strong>Commercial Tonnage & S&P:</strong> Maritime Vessel Brokerage & Supply Logistics</span>
+                    </li>
+                    <li class="spec-item">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span><strong>Strict Compliance:</strong> Full Traceability, Quality Control & Trade Documentation</span>
+                    </li>
+                </ul>
+
+                <p class="card-desc" style="font-size: 0.85rem; margin-bottom: 0;">
+                    <strong>Direct Desk Contacts:</strong><br>
+                    Email: <a href="mailto:info@sirenasdnbhd.com" style="color: var(--accent-blue); text-decoration: none;">info@sirenasdnbhd.com</a> | <a href="mailto:sales@sirenasdnbhd.com" style="color: var(--accent-blue); text-decoration: none;">sales@sirenasdnbhd.com</a>
+                </p>
+
+                <svg class="watermark" width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title" style="font-size: 1.25rem;">Submit Commercial Enquiry</h2>
+                <p class="card-desc">Send your buy/sell requirement directly to our trading management desk.</p>
+
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                    <input type="hidden" name="subject" value="New Commercial Requirement - Sirena Website">
+
+                    <div class="form-group">
+                        <label class="form-label">Company / Full Name</label>
+                        <input type="text" name="name" required class="form-input" placeholder="e.g. Pacific Food Imports Ltd.">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Official Email Address</label>
+                        <input type="email" name="email" required class="form-input" placeholder="name@company.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Requirement Details (Species, Volume, Destination Port)</label>
+                        <textarea name="message" required class="form-textarea" placeholder="Specify species, required quantities, target prices, or supply offers..."></textarea>
+                    </div>
+
+                    <input type="checkbox" name="botcheck" style="display: none;">
+
+                    <button type="submit" class="btn-submit">SUBMIT REQUIREMENTS</button>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="disclaimer">
+                <strong>Sirena Sdn Bhd</strong> (Registered Malaysian Corporation). All trade inquiries, contract negotiations, and broker operations are conducted under strict international maritime & commercial trading standards.
+            </div>
+            <div>
+                &copy; Sirena Sdn Bhd. All Rights Reserved.
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
