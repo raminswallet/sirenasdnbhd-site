@@ -16,7 +16,7 @@
 
   <meta
     name="keywords"
-    content="frozen seafood trade, seafood sourcing, seafood import export, tuna trade, wahoo supplier, seerfish trade, mackerel supplier, hake sourcing, hoki trade, seafood market development, seafood broker Malaysia, frozen fish exporter, seafood processors"
+    content="frozen seafood trade, seafood sourcing, seafood import export, seafood broker Malaysia, tuna trade, wahoo supplier, seerfish trade, mackerel supplier, hake sourcing, hoki trade, seafood market development, frozen fish exporter, seafood processor sourcing"
   >
 
   <meta name="robots" content="index, follow">
@@ -35,13 +35,13 @@
   <meta property="og:url" content="https://sirenasdnbhd.com/">
   <meta property="og:site_name" content="Sirena Sdn Bhd">
 
-  <!-- Replace this image after uploading your final licensed Hero image -->
+  <!-- When your final licensed Hero image is uploaded, retain this URL -->
   <meta
     property="og:image"
     content="https://sirenasdnbhd.com/images/frozen-seafood-reefer-container-export-port.webp"
   >
 
-  <!-- Twitter -->
+  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sirena Sdn Bhd | International Seafood Trade">
   <meta
@@ -62,7 +62,7 @@
     rel="stylesheet"
   >
 
-  <!-- Structured data for Google / Bing -->
+  <!-- Organization Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -95,12 +95,12 @@
       "Octopus",
       "Shrimp",
       "Shellfish",
-      "Seafood processing raw materials"
+      "Seafood processing raw material"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "commercial enquiries",
-      "url": "https://sirenasdnbhd.com/#enquiry",
+      "url": "https://sirenasdnbhd.com/#buyer-enquiry",
       "availableLanguage": [
         "English",
         "Persian"
@@ -158,17 +158,21 @@
       color: var(--white);
 
       /*
-        بعد از آپلود تصویر اصلی، این آدرس را فعال کنید:
+      AFTER YOU UPLOAD YOUR FINAL LICENSED HERO IMAGE:
 
-        background-image:
-          linear-gradient(
-            90deg,
-            rgba(4, 22, 33, 0.96) 0%,
-            rgba(5, 35, 47, 0.88) 42%,
-            rgba(5, 35, 47, 0.54) 73%,
-            rgba(5, 35, 47, 0.62) 100%
-          ),
-          url("/images/frozen-seafood-reefer-container-export-port.webp");
+      background:
+        linear-gradient(
+          90deg,
+          rgba(4, 22, 33, 0.96) 0%,
+          rgba(5, 35, 47, 0.88) 42%,
+          rgba(5, 35, 47, 0.54) 73%,
+          rgba(5, 35, 47, 0.62) 100%
+        ),
+        url("/images/frozen-seafood-reefer-container-export-port.webp");
+
+      background-position: center right;
+      background-size: cover;
+      background-repeat: no-repeat;
       */
 
       background:
@@ -248,6 +252,17 @@
       background: var(--gold-soft);
     }
 
+    .outline.secondary {
+      border-color: rgba(255, 255, 255, 0.55);
+      color: #dcebea;
+    }
+
+    .outline.secondary:hover {
+      color: var(--deep);
+      border-color: #ffffff;
+      background: #ffffff;
+    }
+
     .hero-grid {
       display: grid;
       grid-template-columns: 1.25fr 0.75fr;
@@ -270,7 +285,7 @@
 
     .hero h1 {
       max-width: 770px;
-      margin: 16px 0 22px;
+      margin: 16px 0 14px;
       font-family: "Playfair Display", Georgia, serif;
       font-size: clamp(42px, 5.2vw, 67px);
       font-weight: 700;
@@ -288,6 +303,15 @@
       letter-spacing: 0;
     }
 
+    .regions {
+      margin: 20px 0 24px;
+      color: var(--gold-soft);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
     .hero p {
       max-width: 680px;
       margin: 0 0 24px;
@@ -295,13 +319,10 @@
       font-size: 16px;
     }
 
-    .regions {
-      margin: 0 0 26px;
-      color: var(--gold-soft);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .hero-note {
@@ -322,7 +343,7 @@
       font-size: 14px;
     }
 
-    /* SECTIONS */
+    /* GENERAL SECTIONS */
 
     .section {
       padding: 78px 0;
@@ -361,7 +382,7 @@
       font-size: 14px;
     }
 
-    /* BUYER / SUPPLIER */
+    /* BUYERS / SUPPLIERS */
 
     .split-section {
       background: var(--white);
@@ -401,7 +422,7 @@
       line-height: 1.9;
     }
 
-    /* MARKETS */
+    /* INTERNATIONAL MARKETS */
 
     .markets {
       color: var(--white);
@@ -437,7 +458,7 @@
       font-size: 16px;
     }
 
-    /* PROCESS */
+    /* WORKFLOW */
 
     .steps {
       display: grid;
@@ -469,10 +490,17 @@
       font-size: 14px;
     }
 
-    /* FORM */
+    /* FORMS */
 
     .formarea {
       background: linear-gradient(145deg, #edf4f1, #f6f2ea);
+    }
+
+    .form-intro {
+      max-width: 720px;
+      margin-top: 15px;
+      color: var(--muted);
+      font-size: 15px;
     }
 
     .formbox {
@@ -480,6 +508,10 @@
       padding: 36px;
       border: 1px solid var(--line);
       background: var(--white);
+    }
+
+    .supplier-form {
+      margin-top: 28px;
     }
 
     .formbox h3 {
@@ -528,7 +560,7 @@
     }
 
     textarea {
-      min-height: 130px;
+      min-height: 145px;
       resize: vertical;
     }
 
@@ -693,6 +725,15 @@
         grid-template-columns: 1fr;
       }
 
+      .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions .outline {
+        text-align: center;
+      }
+
       .formbox {
         padding: 23px;
       }
@@ -726,6 +767,7 @@
                 stroke-width="2.4"
                 stroke-linejoin="round"
               />
+
               <path
                 d="M22 28c-6 2-10 7-11 14
                    5-1 9 0 13 3
@@ -736,6 +778,7 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
+
               <path
                 d="M30 19c-3 3-4 7-3 11"
                 stroke="#dcc486"
@@ -752,8 +795,8 @@
 
         </a>
 
-        <a class="cta" href="#enquiry">
-          Submit Confidential Enquiry
+        <a class="cta" href="#buyer-enquiry">
+          Submit Enquiry
         </a>
 
       </nav>
@@ -768,6 +811,7 @@
 
           <h1>
             International Seafood Trade
+
             <span>
               Connecting supply, industry and global markets.
             </span>
@@ -784,9 +828,17 @@
             and international markets.
           </p>
 
-          <a class="outline" href="#enquiry">
-            Submit Confidential Enquiry
-          </a>
+          <div class="hero-actions">
+
+            <a class="outline" href="#buyer-enquiry">
+              I Have a Buying Requirement
+            </a>
+
+            <a class="outline secondary" href="#supplier-enquiry">
+              I Have Available Supply
+            </a>
+
+          </div>
 
         </div>
 
@@ -811,11 +863,13 @@
       <div class="wrap intro">
 
         <div>
+
           <div class="kicker">Sirena Sdn Bhd</div>
 
           <h2>
             Trade is built through relevant connections.
           </h2>
+
         </div>
 
         <div class="introtext">
@@ -925,6 +979,7 @@
         <div class="steps">
 
           <div class="step">
+
             <div class="number">01</div>
 
             <h3>Submit Enquiry</h3>
@@ -933,9 +988,11 @@
               Provide a buying requirement, available supply programme or
               proposal for commercial cooperation.
             </p>
+
           </div>
 
           <div class="step">
+
             <div class="number">02</div>
 
             <h3>Initial Review</h3>
@@ -944,9 +1001,11 @@
               We review product relevance, volume, market, timing and available
               commercial information.
             </p>
+
           </div>
 
           <div class="step">
+
             <div class="number">03</div>
 
             <h3>Selected Matching</h3>
@@ -955,9 +1014,11 @@
               Relevant parties and opportunities are considered subject to
               confirmation and qualification.
             </p>
+
           </div>
 
           <div class="step">
+
             <div class="number">04</div>
 
             <h3>Commercial Coordination</h3>
@@ -966,6 +1027,7 @@
               Qualified opportunities proceed through direct commercial
               communication and documentation review.
             </p>
+
           </div>
 
         </div>
@@ -975,24 +1037,31 @@
     <section class="section formarea" id="enquiry">
       <div class="wrap">
 
-        <div class="kicker">Confidential Commercial Enquiry</div>
+        <div class="kicker">Confidential Commercial Enquiries</div>
 
         <h2>
-          Submit a requirement or available seafood programme.
+          Buying requirements and available supply programmes.
         </h2>
 
-        <div class="formbox">
+        <div class="form-intro">
+          Please use the form that matches your commercial purpose. All
+          enquiries are reviewed discreetly and on a transaction-by-transaction
+          basis.
+        </div>
 
-          <h3>Commercial Enquiry Form</h3>
+        <!-- BUYER FORM -->
+
+        <div class="formbox" id="buyer-enquiry">
+
+          <h3>I Have a Buying Requirement</h3>
 
           <p>
-            Please provide the key commercial information relevant to your
-            requirement, supply programme or proposal for cooperation.
+            For importers, processors, distributors, wholesalers, food-service
+            buyers and authorised buyer representatives.
           </p>
 
           <form action="https://api.web3forms.com/submit" method="POST">
 
-            <!-- Web3Forms Access Key -->
             <input
               type="hidden"
               name="access_key"
@@ -1002,51 +1071,45 @@
             <input
               type="hidden"
               name="subject"
-              value="Confidential Commercial Enquiry — Sirena Sdn Bhd"
+              value="Buyer Requirement — Sirena Sdn Bhd"
             >
 
             <input
               type="hidden"
-              name="from_name"
-              value="Sirena Sdn Bhd Website"
+              name="enquiry_source"
+              value="Website Buyer Requirement Form"
+            >
+
+            <input
+              type="hidden"
+              name="enquiry_type"
+              value="Buying Requirement"
             >
 
             <div class="fields">
 
               <div>
 
-                <label for="role">I Am Contacting As *</label>
+                <label for="buyer-role">I Am Contacting As *</label>
 
-                <select id="role" name="role" required>
+                <select id="buyer-role" name="buyer_role" required>
                   <option value="">Select one</option>
-                  <option>Buyer / Importer</option>
-                  <option>Processor / Distributor</option>
-                  <option>Producer / Vessel Owner</option>
-                  <option>Exporter / Supplier</option>
-                  <option>Representative / Broker</option>
+                  <option>Importer / Buyer</option>
+                  <option>Seafood Processor / Re-processor</option>
+                  <option>Distributor / Wholesaler</option>
+                  <option>Food-Service Buyer</option>
+                  <option>Direct Buyer Representative</option>
+                  <option>Broker / Intermediary</option>
                 </select>
 
               </div>
 
               <div>
 
-                <label for="enquiry_type">Nature of Enquiry *</label>
-
-                <select id="enquiry_type" name="enquiry_type" required>
-                  <option value="">Select one</option>
-                  <option>Buying Requirement</option>
-                  <option>Available Supply</option>
-                  <option>Commercial Cooperation</option>
-                </select>
-
-              </div>
-
-              <div>
-
-                <label for="company">Company / Legal Entity *</label>
+                <label for="buyer-company">Company / Legal Entity *</label>
 
                 <input
-                  id="company"
+                  id="buyer-company"
                   name="company"
                   type="text"
                   required
@@ -1057,10 +1120,10 @@
 
               <div>
 
-                <label for="name">Contact Name *</label>
+                <label for="buyer-name">Contact Name *</label>
 
                 <input
-                  id="name"
+                  id="buyer-name"
                   name="name"
                   type="text"
                   required
@@ -1071,10 +1134,23 @@
 
               <div>
 
-                <label for="email">Business Email *</label>
+                <label for="buyer-title">Job Title</label>
 
                 <input
-                  id="email"
+                  id="buyer-title"
+                  name="job_title"
+                  type="text"
+                  placeholder="Procurement, Import, Director, etc."
+                >
+
+              </div>
+
+              <div>
+
+                <label for="buyer-email">Business Email *</label>
+
+                <input
+                  id="buyer-email"
                   name="email"
                   type="email"
                   required
@@ -1085,10 +1161,10 @@
 
               <div>
 
-                <label for="phone">WhatsApp / WeChat / Phone</label>
+                <label for="buyer-phone">WhatsApp / WeChat / Phone</label>
 
                 <input
-                  id="phone"
+                  id="buyer-phone"
                   name="phone"
                   type="text"
                   placeholder="Include country code"
@@ -1098,10 +1174,37 @@
 
               <div>
 
-                <label for="product_category">Product Category *</label>
+                <label for="buyer-country">Country / City *</label>
+
+                <input
+                  id="buyer-country"
+                  name="country_city"
+                  type="text"
+                  required
+                  placeholder="Country and city"
+                >
+
+              </div>
+
+              <div>
+
+                <label for="buyer-website">Company Website</label>
+
+                <input
+                  id="buyer-website"
+                  name="website"
+                  type="url"
+                  placeholder="https://"
+                >
+
+              </div>
+
+              <div>
+
+                <label for="buyer-category">Product Category *</label>
 
                 <select
-                  id="product_category"
+                  id="buyer-category"
                   name="product_category"
                   required
                 >
@@ -1118,10 +1221,10 @@
 
               <div>
 
-                <label for="species">Species / Product *</label>
+                <label for="buyer-species">Species / Product *</label>
 
                 <input
-                  id="species"
+                  id="buyer-species"
                   name="species"
                   type="text"
                   required
@@ -1132,11 +1235,15 @@
 
               <div>
 
-                <label for="presentation">
+                <label for="buyer-presentation">
                   Presentation / Processing Form *
                 </label>
 
-                <select id="presentation" name="presentation" required>
+                <select
+                  id="buyer-presentation"
+                  name="presentation"
+                  required
+                >
                   <option value="">Select one</option>
                   <option>Whole Fish</option>
                   <option>Headed / Gutted</option>
@@ -1149,11 +1256,11 @@
 
               <div>
 
-                <label for="volume">Volume *</label>
+                <label for="buyer-volume">Required Volume *</label>
 
                 <input
-                  id="volume"
-                  name="volume"
+                  id="buyer-volume"
+                  name="required_volume"
                   type="text"
                   required
                   placeholder="MT, cartons or containers"
@@ -1163,24 +1270,23 @@
 
               <div>
 
-                <label for="origin_destination">
-                  Origin or Destination Port
-                </label>
+                <label for="buyer-port">Destination Port *</label>
 
                 <input
-                  id="origin_destination"
-                  name="origin_destination"
+                  id="buyer-port"
+                  name="destination_port"
                   type="text"
-                  placeholder="Country / port"
+                  required
+                  placeholder="Port and country"
                 >
 
               </div>
 
               <div>
 
-                <label for="incoterm">Price Basis / Incoterm</label>
+                <label for="buyer-incoterm">Preferred Incoterm</label>
 
-                <select id="incoterm" name="incoterm">
+                <select id="buyer-incoterm" name="incoterm">
                   <option value="">Select one</option>
                   <option>FOB</option>
                   <option>CFR</option>
@@ -1192,26 +1298,23 @@
 
               <div class="wide">
 
-                <label for="message">
-                  Requirement or Available Programme *
-                </label>
+                <label for="buyer-message">Requirement Details *</label>
 
                 <textarea
-                  id="message"
+                  id="buyer-message"
                   name="message"
                   required
-                  placeholder="Please include size/grade, packing, production or delivery timing, target market, available documents, target price if relevant, and any other key details."
+                  placeholder="Please include size or grade, packing requirement, monthly or annual volume, target delivery period, final market, required documents, target price indication and other key requirements."
                 ></textarea>
 
               </div>
 
-              <!-- Honeypot anti-spam field -->
               <div class="wide" style="display: none;">
 
-                <label for="botcheck">Leave this field empty</label>
+                <label for="buyer-botcheck">Leave this field empty</label>
 
                 <input
-                  id="botcheck"
+                  id="buyer-botcheck"
                   name="botcheck"
                   type="text"
                   tabindex="-1"
@@ -1227,24 +1330,370 @@
               <input type="checkbox" name="consent" required>
 
               <span>
-                I confirm that this is a genuine commercial enquiry and consent
-                to contact by Sirena Sdn Bhd regarding this opportunity.
+                I confirm that this is a genuine commercial buying requirement
+                and consent to contact by Sirena Sdn Bhd regarding this enquiry.
               </span>
 
             </label>
 
             <button class="submit" type="submit">
-              Submit Confidential Commercial Enquiry
+              Submit Buying Requirement
             </button>
 
-            <div class="formnote">
-              Do not submit passwords, bank details, payment information,
-              passport copies, original certificates or other highly sensitive
-              documents through this form.
+          </form>
+
+        </div>
+
+        <!-- SUPPLIER / SELLER FORM -->
+
+        <div class="formbox supplier-form" id="supplier-enquiry">
+
+          <h3>I Have Available Supply</h3>
+
+          <p>
+            For producers, vessel owners, quota holders, primary processors,
+            exporters, authorised representatives and commercial brokers.
+          </p>
+
+          <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input
+              type="hidden"
+              name="access_key"
+              value="ffc71b18-d79a-4fd3-9ad3-f8c3df6a1fd1"
+            >
+
+            <input
+              type="hidden"
+              name="subject"
+              value="Available Seafood Supply Programme — Sirena Sdn Bhd"
+            >
+
+            <input
+              type="hidden"
+              name="enquiry_source"
+              value="Website Supply Programme Form"
+            >
+
+            <input
+              type="hidden"
+              name="enquiry_type"
+              value="Available Supply Programme"
+            >
+
+            <div class="fields">
+
+              <div>
+
+                <label for="supplier-role">I Am Contacting As *</label>
+
+                <select id="supplier-role" name="supplier_role" required>
+                  <option value="">Select one</option>
+                  <option>Producer</option>
+                  <option>Vessel Owner / Fishing Operator</option>
+                  <option>Quota Holder</option>
+                  <option>Primary Processor</option>
+                  <option>Exporter / Supplier</option>
+                  <option>Authorised Representative</option>
+                  <option>Broker / Intermediary</option>
+                </select>
+
+              </div>
+
+              <div>
+
+                <label for="supplier-company">Company / Legal Entity *</label>
+
+                <input
+                  id="supplier-company"
+                  name="company"
+                  type="text"
+                  required
+                  placeholder="Company name"
+                >
+
+              </div>
+
+              <div>
+
+                <label for="supplier-name">Contact Name *</label>
+
+                <input
+                  id="supplier-name"
+                  name="name"
+                  type="text"
+                  required
+                  placeholder="Full name"
+                >
+
+              </div>
+
+              <div>
+
+                <label for="supplier-title">Job Title</label>
+
+                <input
+                  id="supplier-title"
+                  name="job_title"
+                  type="text"
+                  placeholder="Export Manager, Director, etc."
+                >
+
+              </div>
+
+              <div>
+
+                <label for="supplier-email">Business Email *</label>
+
+                <input
+                  id="supplier-email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="name@company.com"
+                >
+
+              </div>
+
+              <div>
+
+                <label for="supplier-phone">WhatsApp / WeChat / Phone</label>
+
+                <input
+                  id="supplier-phone"
+                  name="phone"
+                  type="text"
+                  placeholder="Include country code"
+                >
+
+              </div>
+
+              <div>
+
+                <label for="supplier-country">Country / City *</label>
+
+                <input
+                  id="supplier-country"
+                  name="country_city"
+                  type="text"
+                  required
+                  placeholder="Country and city"
+                >
+
+              </div>
+
+              <div>
+
+                <label for="supplier-website">Company Website</label>
+
+                <input
+                  id="supplier-website"
+                  name="website"
+                  type="url"
+                  placeholder="https://"
+                >
+
+              </div>
+
+              <div>
+
+                <label for="supplier-category">Product Category *</label>
+
+                <select
+                  id="supplier-category"
+                  name="product_category"
+                  required
+                >
+                  <option value="">Select one</option>
+                  <option>Tuna & Large Pelagics</option>
+                  <option>Wahoo / Seerfish / Mackerel</option>
+                  <option>Whitefish / Groundfish / Flatfish</option>
+                  <option>Squid / Octopus / Cuttlefish</option>
+                  <option>Shrimp / Shellfish</option>
+                  <option>Other Seafood Product</option>
+                </select>
+
+              </div>
+
+              <div>
+
+                <label for="supplier-species">Species / Product *</label>
+
+                <input
+                  id="supplier-species"
+                  name="species"
+                  type="text"
+                  required
+                  placeholder="e.g. Skipjack Tuna, Jack Mackerel, Hake"
+                >
+
+              </div>
+
+              <div>
+
+                <label for="supplier-presentation">
+                  Presentation / Processing Form *
+                </label>
+
+                <select
+                  id="supplier-presentation"
+                  name="presentation"
+                  required
+                >
+                  <option value="">Select one</option>
+                  <option>Whole Fish</option>
+                  <option>Headed / Gutted</option>
+                  <option>Fillet / Loin / Steak</option>
+                  <option>IQF / Block Frozen</option>
+                  <option>Other / To be specified</option>
+                </select>
+
+              </div>
+
+              <div>
+
+                <label for="supplier-volume">Available Volume *</label>
+
+                <input
+                  id="supplier-volume"
+                  name="available_volume"
+                  type="text"
+                  required
+                  placeholder="MT, cartons or containers"
+                >
+
+              </div>
+
+              <div>
+
+                <label for="supplier-origin">Origin / FAO Area</label>
+
+                <input
+                  id="supplier-origin"
+                  name="origin_fao_area"
+                  type="text"
+                  placeholder="Country, fishing area or FAO zone"
+                >
+
+              </div>
+
+              <div>
+
+                <label for="supplier-port">Loading Port</label>
+
+                <input
+                  id="supplier-port"
+                  name="loading_port"
+                  type="text"
+                  placeholder="Port and country"
+                >
+
+              </div>
+
+              <div>
+
+                <label for="supplier-availability">
+                  Availability Period
+                </label>
+
+                <input
+                  id="supplier-availability"
+                  name="availability_period"
+                  type="text"
+                  placeholder="Immediate, month, season or production date"
+                >
+
+              </div>
+
+              <div>
+
+                <label for="supplier-incoterm">
+                  Price Basis / Incoterm
+                </label>
+
+                <select id="supplier-incoterm" name="incoterm">
+                  <option value="">Select one</option>
+                  <option>EXW</option>
+                  <option>FOB</option>
+                  <option>CFR</option>
+                  <option>CIF</option>
+                  <option>To be discussed</option>
+                </select>
+
+              </div>
+
+              <div>
+
+                <label for="supplier-documents">
+                  Documents / Certifications
+                </label>
+
+                <input
+                  id="supplier-documents"
+                  name="documents"
+                  type="text"
+                  placeholder="Health, catch/IUU, HACCP, MSC, Halal, etc."
+                >
+
+              </div>
+
+              <div class="wide">
+
+                <label for="supplier-message">
+                  Available Programme Details *
+                </label>
+
+                <textarea
+                  id="supplier-message"
+                  name="message"
+                  required
+                  placeholder="Please include size or grade, packing, freezing method, glazing, production date, available quantity, price indication, loading schedule, documents available and your authority to sell or represent the product."
+                ></textarea>
+
+              </div>
+
+              <div class="wide" style="display: none;">
+
+                <label for="supplier-botcheck">Leave this field empty</label>
+
+                <input
+                  id="supplier-botcheck"
+                  name="botcheck"
+                  type="text"
+                  tabindex="-1"
+                  autocomplete="off"
+                >
+
+              </div>
+
             </div>
 
+            <label class="consent">
+
+              <input type="checkbox" name="consent" required>
+
+              <span>
+                I confirm that the information is provided for a genuine
+                commercial seafood supply programme and that I have authority to
+                submit this information for commercial review.
+              </span>
+
+            </label>
+
+            <button class="submit" type="submit">
+              Submit Available Supply Programme
+            </button>
+
           </form>
+
         </div>
+
+        <div class="formnote">
+          Do not submit passwords, bank-account details, payment instructions,
+          passport copies, original certificates or other highly sensitive
+          documents through these forms.
+        </div>
+
       </div>
     </section>
 
@@ -1277,7 +1726,8 @@
 
       <div class="footright">
         Malaysia · Established 2013<br>
-        <a href="#enquiry">Confidential Commercial Enquiry</a><br>
+        <a href="#buyer-enquiry">Buyer Enquiry</a><br>
+        <a href="#supplier-enquiry">Supply Programme</a><br>
         <span class="tiny">© 2026 Sirena Sdn Bhd</span>
       </div>
 
@@ -1286,14 +1736,17 @@
 
   <script>
     window.addEventListener("DOMContentLoaded", function () {
-      const form = document.querySelector("form");
-      const submitButton = form.querySelector(".submit");
+      const forms = document.querySelectorAll("form");
 
-      form.addEventListener("submit", function () {
-        if (form.checkValidity()) {
-          submitButton.disabled = true;
-          submitButton.textContent = "Sending Enquiry...";
-        }
+      forms.forEach(function (form) {
+        const submitButton = form.querySelector(".submit");
+
+        form.addEventListener("submit", function () {
+          if (form.checkValidity()) {
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending Enquiry...";
+          }
+        });
       });
     });
   </script>
