@@ -114,6 +114,7 @@
       min-height: 610px;
       padding: 25px 0 72px;
       color: #ffffff;
+
       background:
         linear-gradient(
           100deg,
@@ -122,6 +123,7 @@
           rgba(8, 66, 77, 0.70)
         ),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'%3E%3Crect width='1600' height='900' fill='%230a4351'/%3E%3Cpath d='M0 620 C185 510 350 700 585 608 S1010 490 1325 614 S1490 668 1600 610 V900 H0Z' fill='%231b7d88' opacity='.44'/%3E%3Cpath d='M0 700 C190 605 415 760 672 665 S1182 594 1600 718 V900 H0Z' fill='%237cc3ba' opacity='.18'/%3E%3Cpath d='M0 760 C280 670 530 820 822 720 S1290 692 1600 777 V900 H0Z' fill='%23c7e4d4' opacity='.08'/%3E%3C/svg%3E");
+
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -426,7 +428,7 @@
 
     .h-captcha {
       min-height: 78px;
-      margin: 4px 0 14px;
+      margin: 6px 0 14px;
     }
 
     .h-captcha iframe {
@@ -618,6 +620,8 @@
 
           <span class="brand-mark" aria-hidden="true">
 
+            <!-- Original Sirena logo -->
+
             <svg
               width="31"
               height="31"
@@ -793,7 +797,11 @@
               For importers, processors, distributors and qualified buyers.
             </p>
 
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form
+              id="buyer-form"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+            >
 
               <input
                 type="hidden"
@@ -902,7 +910,11 @@
               representatives.
             </p>
 
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form
+              id="supplier-form"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+            >
 
               <input
                 type="hidden"
@@ -1036,7 +1048,7 @@
     </div>
   </footer>
 
-  <!-- Web3Forms hCaptcha support -->
+  <!-- Web3Forms hCaptcha script -->
 
   <script
     src="https://web3forms.com/client/script.js"
@@ -1044,16 +1056,32 @@
     defer
   ></script>
 
+  <!-- Form validation -->
+
   <script>
     window.addEventListener("DOMContentLoaded", function () {
-      document.querySelectorAll("form").forEach(function (form) {
-        form.addEventListener("submit", function () {
-          if (form.checkValidity()) {
-            const button = form.querySelector(".submit");
+      const forms = document.querySelectorAll("form");
 
-            button.disabled = true;
-            button.textContent = "Sending Enquiry...";
+      forms.forEach(function (form) {
+        form.addEventListener("submit", function (event) {
+          const captchaResponse = form.querySelector(
+            'textarea[name="h-captcha-response"]'
+          );
+
+          if (!captchaResponse || !captchaResponse.value) {
+            event.preventDefault();
+            alert("Please complete the security check before submitting.");
+            return;
           }
+
+          if (!form.checkValidity()) {
+            return;
+          }
+
+          const button = form.querySelector(".submit");
+
+          button.disabled = true;
+          button.textContent = "Sending Enquiry...";
         });
       });
     });
