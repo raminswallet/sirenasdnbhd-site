@@ -114,7 +114,6 @@
       min-height: 610px;
       padding: 25px 0 72px;
       color: #ffffff;
-
       background:
         linear-gradient(
           100deg,
@@ -123,7 +122,6 @@
           rgba(8, 66, 77, 0.70)
         ),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'%3E%3Crect width='1600' height='900' fill='%230a4351'/%3E%3Cpath d='M0 620 C185 510 350 700 585 608 S1010 490 1325 614 S1490 668 1600 610 V900 H0Z' fill='%231b7d88' opacity='.44'/%3E%3Cpath d='M0 700 C190 605 415 760 672 665 S1182 594 1600 718 V900 H0Z' fill='%237cc3ba' opacity='.18'/%3E%3Cpath d='M0 760 C280 670 530 820 822 720 S1290 692 1600 777 V900 H0Z' fill='%23c7e4d4' opacity='.08'/%3E%3C/svg%3E");
-
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -283,7 +281,7 @@
       font-size: 17px;
     }
 
-    /* Buyer / supplier */
+    /* Buyer / supplier cards */
 
     .cards {
       display: grid;
@@ -317,7 +315,7 @@
       line-height: 1.85;
     }
 
-    /* Forms: dark and aligned with hero */
+    /* Forms */
 
     .enquiries {
       color: #ffffff;
@@ -422,6 +420,17 @@
       outline: 2px solid rgba(220, 196, 134, 0.26);
       border-color: var(--gold);
       background: rgba(3, 22, 30, 0.52);
+    }
+
+    /* hCaptcha */
+
+    .h-captcha {
+      min-height: 78px;
+      margin: 4px 0 14px;
+    }
+
+    .h-captcha iframe {
+      max-width: 100%;
     }
 
     .consent {
@@ -589,6 +598,11 @@
       .form-card {
         padding: 23px;
       }
+
+      .h-captcha {
+        transform: scale(0.90);
+        transform-origin: left top;
+      }
     }
   </style>
 </head>
@@ -611,7 +625,6 @@
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-
               <path
                 d="M33 10c7 4 10 11 8 18-1 5-5 8-9 10
                    7 1 13 5 16 11-8 1-15-1-20-6
@@ -638,7 +651,6 @@
                 stroke-width="2.4"
                 stroke-linecap="round"
               />
-
             </svg>
 
           </span>
@@ -771,6 +783,8 @@
 
         <div class="forms">
 
+          <!-- Buyer form -->
+
           <article class="form-card" id="buyer-enquiry">
 
             <h3>I Have a Buying Requirement</h3>
@@ -844,6 +858,13 @@
                 placeholder="Volume, size, form, packing, destination port, delivery period and key requirements."
               ></textarea>
 
+              <div
+                class="h-captcha"
+                data-captcha="true"
+                data-theme="dark"
+                data-size="compact"
+              ></div>
+
               <div class="honeypot">
                 <input
                   name="botcheck"
@@ -869,6 +890,8 @@
             </form>
 
           </article>
+
+          <!-- Supplier form -->
 
           <article class="form-card" id="supplier-enquiry">
 
@@ -944,6 +967,13 @@
                 placeholder="Origin, quantity, product form, packing, loading port, availability, price basis and documents."
               ></textarea>
 
+              <div
+                class="h-captcha"
+                data-captcha="true"
+                data-theme="dark"
+                data-size="compact"
+              ></div>
+
               <div class="honeypot">
                 <input
                   name="botcheck"
@@ -1005,6 +1035,14 @@
 
     </div>
   </footer>
+
+  <!-- Web3Forms hCaptcha support -->
+
+  <script
+    src="https://web3forms.com/client/script.js"
+    async
+    defer
+  ></script>
 
   <script>
     window.addEventListener("DOMContentLoaded", function () {
