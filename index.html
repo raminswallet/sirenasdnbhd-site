@@ -134,6 +134,7 @@
       height: 170px;
       content: "";
       pointer-events: none;
+
       background: linear-gradient(
         to bottom,
         rgba(6, 27, 40, 0),
@@ -281,7 +282,7 @@
       gap: 12px;
     }
 
-    /* Compact buyers / suppliers section */
+    /* Commercial focus */
 
     .commercial-focus {
       padding: 54px 0 58px;
@@ -363,7 +364,7 @@
       font-weight: 600;
     }
 
-    /* Forms */
+    /* Enquiries */
 
     .enquiries {
       padding: 60px 0 66px;
@@ -478,15 +479,6 @@
       background: rgba(3, 22, 30, 0.52);
     }
 
-    .h-captcha {
-      min-height: 78px;
-      margin: 6px 0 14px;
-    }
-
-    .h-captcha iframe {
-      max-width: 100%;
-    }
-
     .consent {
       display: flex;
       align-items: flex-start;
@@ -527,8 +519,16 @@
       opacity: 0.75;
     }
 
+    /* Hidden anti-spam field */
+
     .honeypot {
-      display: none;
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
     }
 
     .form-note {
@@ -670,11 +670,6 @@
 
       .form-card {
         padding: 23px;
-      }
-
-      .h-captcha {
-        transform: scale(0.90);
-        transform-origin: left top;
       }
     }
   </style>
@@ -946,15 +941,12 @@
                 placeholder="Volume, size, form, packing, destination port, delivery period and key requirements."
               ></textarea>
 
-              <div
-                class="h-captcha"
-                data-captcha="true"
-                data-theme="dark"
-                data-size="compact"
-              ></div>
+              <div class="honeypot" aria-hidden="true">
+                <label for="buyer-website">Leave this field empty</label>
 
-              <div class="honeypot">
                 <input
+                  id="buyer-website"
+                  type="text"
                   name="botcheck"
                   tabindex="-1"
                   autocomplete="off"
@@ -1057,15 +1049,12 @@
                 placeholder="Origin, quantity, product form, packing, loading port, availability, price basis and documents."
               ></textarea>
 
-              <div
-                class="h-captcha"
-                data-captcha="true"
-                data-theme="dark"
-                data-size="compact"
-              ></div>
+              <div class="honeypot" aria-hidden="true">
+                <label for="supplier-website">Leave this field empty</label>
 
-              <div class="honeypot">
                 <input
+                  id="supplier-website"
+                  type="text"
                   name="botcheck"
                   tabindex="-1"
                   autocomplete="off"
@@ -1126,32 +1115,10 @@
     </div>
   </footer>
 
-  <script
-    src="https://web3forms.com/client/script.js"
-    async
-    defer
-  ></script>
-
   <script>
     window.addEventListener("DOMContentLoaded", function () {
-      const forms = document.querySelectorAll("form");
-
-      forms.forEach(function (form) {
-        form.addEventListener("submit", function (event) {
-          const captchaResponse = form.querySelector(
-            'textarea[name="h-captcha-response"]'
-          );
-
-          if (!captchaResponse || !captchaResponse.value) {
-            event.preventDefault();
-
-            alert(
-              "Please complete the security check before submitting."
-            );
-
-            return;
-          }
-
+      document.querySelectorAll("form").forEach(function (form) {
+        form.addEventListener("submit", function () {
           if (!form.checkValidity()) {
             return;
           }
