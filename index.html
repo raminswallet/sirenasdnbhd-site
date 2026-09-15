@@ -3,10 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta
     name="description"
@@ -21,22 +18,13 @@
   <title>Sirena Sdn Bhd | International Seafood Trade</title>
 
   <meta property="og:type" content="website">
-  <meta
-    property="og:title"
-    content="Sirena Sdn Bhd | International Seafood Trade"
-  >
+  <meta property="og:title" content="Sirena Sdn Bhd | International Seafood Trade">
   <meta
     property="og:description"
     content="Connecting supply, industry and global markets."
   >
-  <meta
-    property="og:url"
-    content="https://sirenasdnbhd.com/"
-  >
-  <meta
-    property="og:site_name"
-    content="Sirena Sdn Bhd"
-  >
+  <meta property="og:url" content="https://sirenasdnbhd.com/">
+  <meta property="og:site_name" content="Sirena Sdn Bhd">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,39 +34,13 @@
     rel="stylesheet"
   >
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Sirena Sdn Bhd",
-    "url": "https://sirenasdnbhd.com/",
-    "foundingDate": "2013",
-    "description": "International seafood trade connecting supply, industry and global markets.",
-    "areaServed": [
-      "Oceania",
-      "Asia",
-      "Europe",
-      "Middle East",
-      "Africa"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "commercial enquiries",
-      "url": "https://sirenasdnbhd.com/#enquiries"
-    }
-  }
-  </script>
-
   <style>
     :root {
       --deep: #061b28;
       --deep-2: #0b2b38;
-      --panel: #103846;
-      --panel-2: #123f4a;
       --ink: #183943;
       --teal: #5aa6a5;
       --cream: #f2ede2;
-      --muted: #a9c1bd;
       --muted-dark: #5d7173;
       --gold: #dcc486;
       --gold-soft: #ead9a8;
@@ -108,25 +70,57 @@
       padding: 0 26px;
     }
 
-    /* Hero */
+    /* Hero: this section loads your uploaded image */
 
     .hero {
-      min-height: 610px;
+      position: relative;
+      min-height: 650px;
+      overflow: hidden;
       padding: 25px 0 72px;
       color: #ffffff;
 
-      background:
+      background-image:
         linear-gradient(
-          100deg,
-          rgba(4, 23, 34, 0.98),
-          rgba(5, 41, 53, 0.91) 54%,
-          rgba(8, 66, 77, 0.70)
+          90deg,
+          rgba(4, 20, 30, 0.98) 0%,
+          rgba(4, 24, 34, 0.94) 30%,
+          rgba(5, 37, 47, 0.76) 53%,
+          rgba(4, 23, 32, 0.26) 76%,
+          rgba(4, 23, 32, 0.12) 100%
         ),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'%3E%3Crect width='1600' height='900' fill='%230a4351'/%3E%3Cpath d='M0 620 C185 510 350 700 585 608 S1010 490 1325 614 S1490 668 1600 610 V900 H0Z' fill='%231b7d88' opacity='.44'/%3E%3Cpath d='M0 700 C190 605 415 760 672 665 S1182 594 1600 718 V900 H0Z' fill='%237cc3ba' opacity='.18'/%3E%3Cpath d='M0 760 C280 670 530 820 822 720 S1290 692 1600 777 V900 H0Z' fill='%23c7e4d4' opacity='.08'/%3E%3C/svg%3E");
+        linear-gradient(
+          0deg,
+          rgba(4, 20, 29, 0.48) 0%,
+          rgba(4, 20, 29, 0.03) 52%,
+          rgba(4, 20, 29, 0.12) 100%
+        ),
 
-      background-position: center;
-      background-size: cover;
+        /* Image file uploaded to GitHub */
+        url("reefer_shipment.jpg");
+
+      background-position: center, center, right center;
+      background-size: cover, cover, cover;
       background-repeat: no-repeat;
+    }
+
+    .hero::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 150px;
+      content: "";
+      pointer-events: none;
+      background: linear-gradient(
+        to bottom,
+        rgba(6, 27, 40, 0),
+        rgba(6, 27, 40, 0.24)
+      );
+    }
+
+    .hero .wrap {
+      position: relative;
+      z-index: 1;
     }
 
     /* Header */
@@ -136,7 +130,7 @@
       align-items: center;
       justify-content: space-between;
       padding-bottom: 21px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.20);
     }
 
     .brand {
@@ -155,11 +149,13 @@
       place-items: center;
       border: 1px solid rgba(220, 196, 134, 0.62);
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.04);
+      background: rgba(4, 20, 30, 0.26);
+      backdrop-filter: blur(3px);
     }
 
     .brand b {
       display: block;
+      color: #ffffff;
       font-size: 18px;
       font-weight: 700;
       letter-spacing: 0.16em;
@@ -185,6 +181,7 @@
       padding: 12px 18px;
       border: 1px solid var(--gold);
       color: #ffffff;
+      background: rgba(4, 20, 30, 0.14);
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.1em;
@@ -199,8 +196,8 @@
     }
 
     .button.alt {
-      border-color: rgba(255, 255, 255, 0.62);
-      color: #e2efed;
+      border-color: rgba(255, 255, 255, 0.70);
+      color: #ffffff;
     }
 
     .button.alt:hover {
@@ -209,11 +206,11 @@
       background: #ffffff;
     }
 
-    /* Hero text */
+    /* Hero content */
 
     .hero-main {
-      max-width: 780px;
-      padding-top: 112px;
+      max-width: 720px;
+      padding-top: 108px;
     }
 
     .eyebrow {
@@ -226,21 +223,24 @@
 
     .hero h1 {
       margin: 15px 0;
+      color: #ffffff;
       font-family: "Playfair Display", Georgia, serif;
       font-size: clamp(44px, 5.3vw, 69px);
       font-weight: 700;
       line-height: 1.04;
+      text-shadow: 0 4px 22px rgba(0, 0, 0, 0.25);
     }
 
     .hero h1 span {
       display: block;
-      max-width: 670px;
+      max-width: 650px;
       margin-top: 14px;
-      color: #dcebea;
+      color: #e2efed;
       font-family: "DM Sans", Arial, sans-serif;
       font-size: clamp(18px, 2vw, 23px);
       font-weight: 400;
       line-height: 1.35;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.24);
     }
 
     .regions {
@@ -321,7 +321,13 @@
 
     .enquiries {
       color: #ffffff;
-      background: var(--deep-2);
+      background:
+        linear-gradient(
+          135deg,
+          #061b28 0%,
+          #0b2b38 56%,
+          #0d3540 100%
+        );
     }
 
     .enquiry-head {
@@ -363,12 +369,13 @@
     .form-card {
       padding: 27px;
       border: 1px solid var(--line);
-      background: linear-gradient(
-        145deg,
-        rgba(19, 63, 74, 0.98),
-        rgba(10, 42, 53, 0.98)
-      );
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(19, 63, 74, 0.98),
+          rgba(10, 42, 53, 0.98)
+        );
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
     }
 
     .form-card h3 {
@@ -462,6 +469,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       cursor: pointer;
+      transition: 0.2s ease;
     }
 
     .submit:hover {
@@ -521,6 +529,7 @@
     @media (max-width: 750px) {
       .hero {
         min-height: auto;
+        background-position: center, center, 66% center;
       }
 
       .hero-main {
@@ -574,6 +583,10 @@
         letter-spacing: 0.13em;
       }
 
+      .hero {
+        background-position: center, center, 63% center;
+      }
+
       .hero h1 {
         font-size: 43px;
       }
@@ -619,8 +632,6 @@
         <a class="brand" href="#top" aria-label="Sirena Sdn Bhd Home">
 
           <span class="brand-mark" aria-hidden="true">
-
-            <!-- Original Sirena logo -->
 
             <svg
               width="31"
@@ -787,8 +798,6 @@
 
         <div class="forms">
 
-          <!-- Buyer form -->
-
           <article class="form-card" id="buyer-enquiry">
 
             <h3>I Have a Buying Requirement</h3>
@@ -898,8 +907,6 @@
             </form>
 
           </article>
-
-          <!-- Supplier form -->
 
           <article class="form-card" id="supplier-enquiry">
 
@@ -1048,7 +1055,7 @@
     </div>
   </footer>
 
-  <!-- Web3Forms hCaptcha script -->
+  <!-- Web3Forms hCaptcha -->
 
   <script
     src="https://web3forms.com/client/script.js"
@@ -1056,7 +1063,7 @@
     defer
   ></script>
 
-  <!-- Form validation -->
+  <!-- hCaptcha and form validation -->
 
   <script>
     window.addEventListener("DOMContentLoaded", function () {
@@ -1070,7 +1077,11 @@
 
           if (!captchaResponse || !captchaResponse.value) {
             event.preventDefault();
-            alert("Please complete the security check before submitting.");
+
+            alert(
+              "Please complete the security check before submitting."
+            );
+
             return;
           }
 
